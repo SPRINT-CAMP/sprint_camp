@@ -31,21 +31,53 @@ export function renderHeader(items = []) {
   // 생성된 버튼들에 클릭 이벤트 바인딩
   const buttons = document.querySelectorAll('.header .icon-btn');
   buttons.forEach((button, index) => {
-    button.addEventListener('click', items[index].onClick);
+    const item = items[index];
+
+    button.addEventListener('click', (e) => {
+      if (item.targetSection) {
+        const selector = item.targetSection.startsWith('#') 
+          ? item.targetSection 
+          : `#${item.targetSection}`;
+
+        const targetElement = document.querySelector(selector);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      if (typeof item.onClick === 'function') {
+        item.onClick(e);
+      }
+    });
   });
 }
 
 /*
-<script type="module">
+<body>
+  <!-- [사용법] 자동 스크롤 기능을 적용할 단위는 <section> 태그로 감싸고 고유한 id를 부여하세요. -->
+  <section id = "sec-10">
+    <h1>Hello World</h1>
+  </section>
+
+  <section id = "sec-11">
+    <h1>Hello World</h1>
+  </section>
+
+  <script type="module">
     import { renderHeader } from './js/header.js';
 
     renderHeader([
     {
+      content: '[목록]',
+      targetSection: 'sec-11' // 이동하려는 section의 id 입력 (예: 'sec-11')
+    },
+    {
       content: './assets/images/main.svg',
       onClick: () => {
-        location.href = '페이지.html';
+        location.href = 'main.html'; //이동하려는 페이지 경로 입력 (예: 'main.html')
       }
     }
     ]);
-</script>
+  </script>
+</body>
 */
