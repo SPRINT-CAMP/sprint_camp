@@ -1,0 +1,33 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 32px;
+    border-radius: 9px;
+    font-size: 20px;
+    background-color: #E8E8E8;
+    color: #000000;
+    border: none;
+
+    cursor: pointer;
+    gap: 10px;
+}
+
+/*long button*/
+.btn.btn-long {
+    display: flex;
+    padding: 6px 112px;
+    font-size: 12px;
+}
+
+/* 아이콘*/
+.btn-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* long button 아이콘 */
+.btn.btn-long .btn-icon {
+    width: 16px;
+    height: 16px;
+}
