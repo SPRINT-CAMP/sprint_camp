@@ -1,7 +1,15 @@
 export function renderHeader(items = []) {
   // 1. 전달받은 항목을 버튼으로 변환
   const itemsHTML = items
-    .map(item => `<button type="button" class="icon-btn">${item}</button>`)
+    .map(item => {
+      const isImage = typeof item === 'string' && /\.(svg|png|jpg|jpeg|webp)$/i.test(item.trim());
+      
+      const content = isImage 
+        ? `<img src="${item}" alt="icon">` 
+        : item;
+
+      return `<button type="button" class="icon-btn">${content}</button>`;
+    })
     .join('');
 
   // 2. HTML 템플릿

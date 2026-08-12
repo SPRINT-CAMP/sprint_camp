@@ -13,6 +13,15 @@
     <h1>Hello World</h1>
 
     <script src="js/main.js"></script>
+    <script type="module">
+        import { renderHeader } from './js/header.js';
+
+        // 헤더 생성 함수 실행
+        renderHeader([
+            './assets/images/sample_4x3.png',
+            '🔔',
+            '로그인']);
+    </script>
 </body>
 
 </html>
