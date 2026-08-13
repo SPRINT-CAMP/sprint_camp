@@ -1,4 +1,4 @@
-.btn {
+ï»¿.btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -20,13 +20,13 @@
     font-size: 12px;
 }
 
-/* ¾ÆÀÌÄÜ*/
+/* ì•„ì´ì½˜*/
 .btn-icon {
     width: 24px;
     height: 24px;
 }
 
-/* long button ¾ÆÀÌÄÜ */
+/* long button ì•„ì´ì½˜ */
 .btn.btn-long .btn-icon {
     width: 16px;
     height: 16px;

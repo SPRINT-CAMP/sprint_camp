@@ -1,6 +1,6 @@
 ﻿export function createButton(text, options = {}) {
     // 기본 세팅
-    const { iconSrc = null, size = 'default' } = options;
+    const { iconSrc = null, size = 'default', onClick = null } = options;
 
     const buttonElement = document.createElement('button');
     buttonElement.classList.add('btn');
@@ -24,6 +24,10 @@
     textElement.textContent = text;
     buttonElement.appendChild(textElement);
 
+    if (onClick) {
+        buttonElement.addEventListener('click', onClick);
+    }
+
     return buttonElement;
 }
 
@@ -33,12 +37,18 @@
         const container = document.getElementById('button-container');
 
         const basicBtn = createButton('시연 영상 보기', {
-            iconSrc: 'https://via.placeholder.com/24/cccccc/000000?text=I'
+            iconSrc: 'https://via.placeholder.com/24/cccccc/000000?text=I',
+            onClick: function() {
+                console.log('click button');
+            }
         });
 
         const longBtn = createButton('결과물 확인하기', {
             size: 'long',
-            iconSrc: 'https://via.placeholder.com/24/cccccc/000000?text=I'
+            iconSrc: 'https://via.placeholder.com/24/cccccc/000000?text=I',
+            onClick: function() {
+                console.log('click button');
+            }
         });
 
         container.append(basicBtn, longBtn);</script>
