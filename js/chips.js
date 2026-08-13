@@ -1,6 +1,6 @@
 ﻿export function createChip(text, options = {}) {
     // 기본 세팅
-    const { variant = 'default', iconSrc = null, iconPosition = 'left' } = options;
+    const { variant = 'default', iconSrc = null, iconPosition = 'left', onClick = null } = options;
 
     const chipElement = document.createElement('button');
     chipElement.classList.add('chip');
@@ -34,6 +34,10 @@
         chipElement.appendChild(textElement);
     }
 
+    if (onCLick) {
+        chipElement.addEventListener('click', onClick);
+    }
+
     return chipElement;
 }
 
@@ -47,6 +51,9 @@ const testChip = createChip('텍스트', {
   variant: 'purple', // purple, while (기본은 생략)
   iconSrc: './assets/test_icon.png',
   iconPosition: 'right' // left, right (없으면 생략)
+  onClick: function() { // 없으면 생략
+    console.log('click event');
+  }
 });
 
 container.append(testChip);
