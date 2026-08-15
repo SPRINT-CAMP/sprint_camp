@@ -1,0 +1,30 @@
+.chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    font-size: 24px;
+    border-radius: 46px;
+    border: 1px solid #C0C0C0;
+    background-color: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    gap: 4px;
+}
+
+/*삭제 가능한 칩*/
+.chip.chip-purple {
+    background-color: #6068B2;
+}
+
+/*흰 배경 칩*/
+.chip.chip-white {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* 아이콘 크기 조절 */
+.chip-icon {
+    width: 30px;
+    height: 30px;
+}
