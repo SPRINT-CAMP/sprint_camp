@@ -1,0 +1,290 @@
+import { renderHeader } from '../../js/header.js';
+import { renderFooter } from '../../js/footer.js';
+import { createButton } from '../../js/buttons.js';
+import { createChip } from '../../js/chips.js';
+
+const params = new URLSearchParams(window.location.search);
+const teamId = params.get('id');
+
+async function getTeamData() {
+
+    const response = await fetch('../../data/dummy.json');
+
+    if (!response.ok) {
+        throw new Error('팀 데이터를 불러오지 못했습니다.');
+    }
+
+    const teams = await response.json();
+
+    const team = teams.find((item) => item.id === teamId);
+
+    if (!team) {
+        throw new Error('해당 팀을 찾을 수 없습니다.');
+    }
+
+    return team;
+}
+
+async function renderTeamPage() {
+
+    try {
+
+        const team = await getTeamData();
+
+        document.title = `${team.teamName} | SPRINT CAMP`;
+
+        document.querySelector('#team-thumbnail').src = `../../${team.thumbnail}`;
+
+        document.querySelector('#team-title').textContent = team.title;
+
+        document.querySelector('#team-name').textContent = `team ${team.teamName}`;
+
+        document.querySelector('#team-description').textContent =
+            team.description;
+
+
+        const leader = team.members.find(
+            (member) => member.isLeader
+        );
+
+        const members = team.members.filter(
+            (member) => !member.isLeader
+        );
+
+        document.querySelector('#team-leader').textContent =
+            leader
+                ? `${leader.major} ${leader.name}`
+                : '-';
+
+        document.querySelector('#team-members').textContent =
+            members.length > 0
+                ? members
+                    .map((member) => `${member.major} ${member.name}`)
+                    .join(', ')
+                : '-';
+
+        const chipContainer = document.querySelector('#team-chips');
+
+        const categoryChip = createChip(team.category);
+
+        const levelChip = createChip(team.level);
+
+        chipContainer.append(
+            categoryChip,
+            levelChip
+        );
+
+        const buttonContainer =
+            document.querySelector('#team-buttons');
+
+        if (team.demo) {
+
+            const demoButton = createButton(
+                '시연 영상 보기',
+                {
+                    iconSrc: '../../assets/images/ic_video.svg',
+
+                    onClick: () => {
+                        window.open(
+                            team.demo,
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }
+                }
+            );
+            buttonContainer.appendChild(demoButton);
+        }
+
+        if (team.github) {
+            const githubButton = createButton(
+                '결과물 확인하기',
+                {
+                    iconSrc: '../../assets/images/ic_link.svg',
+                    onClick: () => {
+                        window.open(
+                            team.github,
+                            '_blank',
+                            'noopener,noreferrer'
+                        );
+                    }
+                }
+            );
+            buttonContainer.appendChild(githubButton);
+        }
+        renderPptImages(team.ppt_img);
+    } catch (error) {
+        console.error(error);
+        document.querySelector('.team-page').innerHTML = `
+      <div class="error-message">
+        <h1>페이지를 불러올 수 없습니다.</h1>
+      </div>
+    `;
+    }
+}
+
+function renderPptImages(images) {
+
+    if (!images || images.length === 0) {
+        return;
+    }
+
+    const mainImage =
+        document.querySelector('#main-ppt-image');
+
+    const thumbnailContainer =
+        document.querySelector('#ppt-thumbnails');
+
+    const prevButton =
+        document.querySelector('#ppt-prev');
+
+    const nextButton =
+        document.querySelector('#ppt-next');
+
+    const ITEMS_PER_VIEW = 5;
+
+    let startIndex = 0;
+
+    let currentImageIndex = 0;
+
+    mainImage.src = `../../${images[0]}`;
+
+    function renderThumbnails() {
+
+        thumbnailContainer.innerHTML = '';
+
+        const endIndex = Math.min(
+            startIndex + ITEMS_PER_VIEW,
+            images.length
+        );
+
+        for (
+            let index = startIndex;
+            index < endIndex;
+            index++
+        ) {
+            const image = images[index];
+            const button =
+                document.createElement('button');
+
+            button.type = 'button';
+            button.classList.add('ppt-thumbnail');
+
+            if (index === currentImageIndex) {
+                button.classList.add('active');
+            }
+
+            const img =
+                document.createElement('img');
+            img.src = `../../${image}`;
+            img.alt =
+                `프로젝트 이미지 ${index + 1}`;
+            button.appendChild(img);
+
+            button.addEventListener('click', () => {
+                mainImage.src =
+                    `../../${image}`;
+
+                currentImageIndex = index;
+
+                document
+                    .querySelectorAll('.ppt-thumbnail')
+                    .forEach((item) => {
+                        item.classList.remove('active');
+                    });
+
+                button.classList.add('active');
+            });
+            thumbnailContainer.appendChild(button);
+        }
+
+        updateSliderButtons();
+    }
+
+    function updateSliderButtons() {
+        if (images.length <= ITEMS_PER_VIEW) {
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+            return;
+        }
+
+        prevButton.style.display = 'block';
+        nextButton.style.display = 'block';
+
+        prevButton.disabled =
+            startIndex === 0;
+
+        nextButton.disabled =
+            startIndex >=
+            images.length - ITEMS_PER_VIEW;
+    }
+
+    prevButton.addEventListener('click', () => {
+
+        if (startIndex <= 0) {
+            return;
+        }
+
+        startIndex--;
+
+        const currentVisible =
+            currentImageIndex >= startIndex &&
+            currentImageIndex < startIndex + ITEMS_PER_VIEW;
+
+        if (!currentVisible) {
+            currentImageIndex = startIndex;
+            mainImage.src =
+                `../../${images[currentImageIndex]}`;
+        }
+
+        renderThumbnails();
+    });
+
+    nextButton.addEventListener('click', () => {
+        const maxStartIndex =
+            images.length - ITEMS_PER_VIEW;
+
+        if (startIndex >= maxStartIndex) {
+            return;
+        }
+
+        startIndex++;
+
+        const currentVisible =
+            currentImageIndex >= startIndex &&
+            currentImageIndex < startIndex + ITEMS_PER_VIEW;
+
+        if (!currentVisible) {
+            currentImageIndex = startIndex;
+            mainImage.src =
+                `../../${images[currentImageIndex]}`;
+        }
+
+        renderThumbnails();
+    });
+
+    renderThumbnails();
+}
+
+// TODO: 페이지 연결
+renderHeader([
+    {
+        content: '../../assets/images/main.svg',
+
+        onClick: () => {
+            window.location.href = '../../index.html';
+        }
+    },
+
+    {
+        content: '../../assets/images/list.svg',
+
+        onClick: () => {
+            window.location.href = '../../index.html';
+        }
+    }
+]);
+
+renderFooter();
+
+renderTeamPage();
