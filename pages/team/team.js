@@ -60,7 +60,7 @@ async function renderTeamPage() {
             members.length > 0
                 ? members
                     .map((member) => `${member.major} ${member.name}`)
-                    .join(', ')
+                    .join('\u00A0\u00A0')
                 : '-';
 
         const chipContainer = document.querySelector('#team-chips');
