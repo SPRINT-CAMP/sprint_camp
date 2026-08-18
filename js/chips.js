@@ -34,7 +34,7 @@
         chipElement.appendChild(textElement);
     }
 
-    if (onCLick) {
+    if (onClick) {
         chipElement.addEventListener('click', onClick);
     }
 
