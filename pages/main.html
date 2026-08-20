@@ -5,12 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPRINT CAMP 온라인 전시회</title>
     <!--css-->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 <body>
     <!--헤더-->
-    <header id="global-header">
-    </header>
+    <script type="module">
+    import { renderHeader } from '../js/header.js';
+
+    renderHeader([
+    {
+    content: '[전시회]',
+    targetSection: 'hero-section' // 최상단 메인 배너로 이동
+    },
+    {
+    content: '[개요]',
+    targetSection: 'about-section' // SPRINT CAMP란? 섹션으로 이동
+    },
+    {
+    content: '[일정]',
+    targetSection: 'schedule-section' // 일정 섹션으로 이동
+    },
+    {
+    content: '[분야]',
+    targetSection: 'categories-section' // 분야 섹션으로 이동
+    },
+    {
+    content: '[트랙]',
+    targetSection: 'tracks-section' // 트랙 섹션으로 이동
+    },
+    {
+      content: '☰',
+      onClick: () => {
+        // 햄버거버튼
+      }
+    }
+    ]);
+  </script>
 
     <main>
         <!--메인 배너-->
@@ -37,8 +67,5 @@
     <!--푸터-->
     <footer id="global-footer">
     </footer>
-
-    <!--js-->
-    <script src="./js/main.js"></script>
 </body>
 </html>
