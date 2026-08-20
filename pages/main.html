@@ -6,6 +6,9 @@
     <title>SPRINT CAMP 온라인 전시회</title>
     <!--css-->
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/buttons.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <!--헤더-->
@@ -45,6 +48,31 @@
     <main>
         <!--메인 배너-->
         <section id="hero-section">
+            <!--이미지 영역-->
+            <div class="hero-image">
+                <img src="../assets/images/Logo.png" alt="SPRINT CAMP 로고">
+            </div>
+
+            <!--텍스트 영역-->
+            <div class="hero-text">
+                <h2>SPRINT CAMP<br>온라인 전시회</h2>
+                <p class="hero-date">2026.09.00 - 2026.09.00</p>
+                <div id="button-container"></div>
+
+                <script type="module">import { createButton } from '../js/buttons.js';
+
+                    const container = document.getElementById('button-container');
+
+                    const resBtn = createButton('결과물 보러가기 →', {
+                    size: 'long',
+                    onClick: function() {
+                        location.href = 'team.html';
+                    }
+                    });
+
+                    container.append(resBtn);
+                </script>
+            </div>
         </section>
 
         <!--개요-->
