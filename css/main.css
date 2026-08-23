@@ -210,7 +210,7 @@ section {
     line-height: 1.4;
 }
 
-/* --- 트랙(Tracks) 섹션 --- */
+/* --- 트랙 섹션 --- */
 #tracks-section {
     max-width: 1200px;
     margin: 0 auto;
@@ -426,8 +426,6 @@ section {
     }
 
     /*일정 섹션*/
-    @media screen and (max-width: 768px) {
-    @media screen and (max-width: 768px) {
     #schedule-section {
         padding: 60px 20px !important;
         display: flex !important;
@@ -512,6 +510,48 @@ section {
         margin: 0 !important;
         word-break: keep-all !important;
     }
-}
-}
+
+    /*분야 섹션*/
+    #categories-section {
+        padding: 60px 20px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .categories-container {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+
+    .categories-container h2 {
+        font-size: 24px !important;
+        margin-bottom: 24px !important;
+        text-align: left !important;
+    }
+
+    .categories-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+    }
+
+    .category-card {
+        flex-direction: row !important;
+        padding: 16px 20px !important;
+        justify-content: flex-start !important;
+    }
+
+    .icon-circle {
+        width: 48px !important;
+        height: 48px !important;
+        margin-bottom: 0 !important;
+        margin-right: 20px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .category-card p {
+        font-size: 16px !important;
+        text-align: left !important;
+        margin: 0 !important;
+    }
 }
