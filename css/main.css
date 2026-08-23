@@ -203,3 +203,54 @@ body {
     word-break: keep-all;
     line-height: 1.4;
 }
+
+/* --- 트랙(Tracks) 섹션 --- */
+#tracks-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    margin-bottom: 80px;
+}
+
+.tracks-container h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+/*그리드 레이아웃*/
+.tracks-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.track-card {
+    background-color: #5c5c5c;
+    border-radius: 12px;
+    padding: 50px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.track-stars {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: -30px;
+}
+
+.track-card h3 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.track-card p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #ffffff;
+    font-weight: 400;
+}
