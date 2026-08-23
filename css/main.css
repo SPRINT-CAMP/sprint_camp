@@ -554,4 +554,48 @@ section {
         text-align: left !important;
         margin: 0 !important;
     }
+
+    /*트랙 섹션*/
+    #tracks-section {
+        padding: 60px 20px !important;
+        margin-bottom: 40px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .tracks-container {
+        width: 100% !important;
+        max-width: 320px !important;
+    }
+
+    .tracks-container h2 {
+        font-size: 24px !important;
+        margin-bottom: 24px !important;
+        text-align: left !important;
+    }
+
+    .tracks-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .track-card {
+        padding: 30px 20px !important;
+    }
+
+    .track-stars {
+        font-size: 20px !important;
+        margin-bottom: -15px !important;
+    }
+
+    .track-card h3 {
+        font-size: 28px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .track-card p {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
+    }
 }
