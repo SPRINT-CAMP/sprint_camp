@@ -424,4 +424,94 @@ section {
         font-size: 14px !important; 
         line-height: 1.5 !important;
     }
+
+    /*일정 섹션*/
+    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
+    #schedule-section {
+        padding: 60px 20px !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .schedule-container {
+        width: 100% !important;
+        max-width: 320px !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    #schedule-section h2 {
+        font-size: 24px !important;
+        align-self: flex-start !important;
+        margin-bottom: 24px !important;
+    }
+
+    .schedule-box {
+        background-color: #2a2a2a !important;
+        border-radius: 20px !important;
+        padding: 40px 20px !important;
+        width: 100% !important;
+    }
+
+    .timeline {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+
+    .timeline::before {
+        content: "" !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 15px !important;
+        width: 2px !important;
+        height: 100% !important; 
+        background-color: #ffffff !important;
+        transform: translateX(-50%) !important;
+        z-index: 1 !important;
+    }
+
+    .timeline-item {
+        display: flex !important;
+        align-items: center !important;
+        position: relative !important;
+        padding-left: 45px !important;
+        z-index: 2 !important;
+    }
+
+    .dot {
+        width: 8px !important;
+        height: 8px !important;
+        background-color: #ffffff !important;
+        border-radius: 50% !important;
+        position: absolute !important;
+        top: 50% !important; 
+        left: 15px !important;
+        transform: translate(-50%, -50%) !important; 
+        z-index: 3 !important;
+    }
+
+    .date {
+        width: 35% !important;
+        text-align: left !important;
+        padding-right: 15px !important;
+        font-size: 12px !important;
+        color: #a3a3a3 !important;
+        line-height: 1.4 !important;
+        margin: 0 !important;
+        word-break: break-all !important;
+    }
+
+    .label {
+        width: 65% !important;
+        text-align: left !important;
+        font-size: 14px !important;
+        color: #ffffff !important;
+        margin: 0 !important;
+        word-break: keep-all !important;
+    }
+}
+}
 }
