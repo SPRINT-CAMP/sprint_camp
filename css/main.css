@@ -358,4 +358,58 @@ section {
     section {
         scroll-margin-top: 10px !important;
     }
+
+    /*메인 배너(전시회) 섹션*/
+    #hero-section {
+        flex-direction: column !important;
+        align-items: center !important;
+        padding-top: 80px !important;
+        padding-bottom: 60px !important;
+        gap: 30px !important;
+    }
+
+    .hero-image {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin-bottom: -40px;
+    }
+
+    .hero-image img {
+        width: 80% !important;
+        max-width: 300px !important;
+        margin-top: 0 !important;
+    }
+
+    .hero-text {
+        width: 55% !important; 
+        max-width: 320px !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .hero-text h2 {
+        font-size: 36px !important;
+        line-height: 1.3 !important;
+        margin-bottom: -10px !important;
+    }
+
+    .hero-text .hero-date {
+        font-size: 18px !important;
+        margin-bottom: 15px !important;
+    }
+
+    #button-container {
+        width: 230px !important;
+    }
+
+    #button-container button,
+    #button-container a {
+        width: 100% !important;
+        white-space: nowrap !important;
+        font-size: 14px !important;
+        padding: 12px -5px !important;
+    }
 }
