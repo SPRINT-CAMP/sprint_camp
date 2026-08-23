@@ -67,12 +67,11 @@ body {
     width: 100%;
     box-sizing: border-box;
     padding: 120px 20px;
-    text-align: center;
 }
 
 .about-content {
-    display: inline-block;
-    text-align: left;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #about-section h2 {
