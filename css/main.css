@@ -149,3 +149,57 @@ body {
     font-weight: 700;
     word-break: keep-all; 
 }
+
+/*분야 섹션*/
+#categories-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px;
+}
+
+.categories-container h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.category-card {
+    background-color: #5c5c5c;
+    border-radius: 12px;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.icon-circle {
+    width: 120px;
+    height: 120px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.icon-circle img {
+    width: 50%;
+    height: auto;
+}
+
+.category-card p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    word-break: keep-all;
+    line-height: 1.4;
+}
