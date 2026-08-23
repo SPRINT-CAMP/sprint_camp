@@ -31,7 +31,7 @@ const filterList = [
   { text: '메이커', isHeader: false }
 ];
 
-// body 기준 드롭다운 팝업 생성 함수
+// 필터 칩 내부에 드롭다운 생성 함수 (수정됨)
 function toggleDropdown(targetElement, onSelectOption) {
   let existingDropdown = document.querySelector('.filter-dropdown');
 
@@ -39,6 +39,9 @@ function toggleDropdown(targetElement, onSelectOption) {
     existingDropdown.remove();
     return;
   }
+
+  // 필터 칩 요소를 드롭다운의 부모 기준점으로 설정
+  targetElement.style.position = 'relative';
 
   const dropdown = document.createElement('div');
   dropdown.className = 'filter-dropdown';
@@ -59,13 +62,8 @@ function toggleDropdown(targetElement, onSelectOption) {
     dropdown.appendChild(optionEl);
   });
 
-  document.body.appendChild(dropdown);
-
-  const rect = targetElement.getBoundingClientRect();
-  dropdown.style.position = 'fixed';
-  dropdown.style.top = `${rect.bottom + 8}px`;
-  dropdown.style.left = `${rect.left}px`;
-  dropdown.style.zIndex = '9999';
+  // targetElement(필터 칩) 자식으로 추가하여 위치를 고정
+  targetElement.appendChild(dropdown);
 
   const handleOutsideClick = (e) => {
     if (!dropdown.contains(e.target) && !targetElement.contains(e.target)) {
@@ -130,7 +128,7 @@ function setupSumChips() {
   renderChipsArea();
 }
 
-// ✨ 단일 팀 카드 생성 함수 (선택된 필터 강조 적용)
+// 단일 팀 카드 생성 함수
 function createTeamCard(team) {
   const card = document.createElement('article');
   card.className = 'team-card';
@@ -152,7 +150,6 @@ function createTeamCard(team) {
 
   const teamChipsContainer = card.querySelector('.team-chips');
 
-  // 분야(category) 칩 생성: activeFilters에 포함되어 있다면 purple 적용
   if (team.category) {
     const isCategoryActive = activeFilters.has(team.category);
     const categoryChip = createChip(team.category, {
@@ -161,7 +158,6 @@ function createTeamCard(team) {
     teamChipsContainer.append(categoryChip);
   }
 
-  // 트랙(level) 칩 생성: activeFilters에 포함되어 있다면 purple 적용
   if (team.level) {
     const isLevelActive = activeFilters.has(team.level);
     const levelChip = createChip(team.level, {
@@ -188,7 +184,7 @@ function renderFilteredTeams() {
   }
 
   const filteredTeams = allTeams.filter(team => {
-    return Array.from(activeFilters).some(filter => {
+    return Array.from(activeFilters).every(filter => {
       return team.level === filter || team.category === filter;
     });
   });

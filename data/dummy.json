@@ -63,5 +63,137 @@
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png"
         ]
+    },
+
+    {
+        "id": "team-1",
+        "teamName": "샘플팀",
+        "members": [
+            {
+                "name": "서유정",
+                "major": "컴퓨터공학과",
+                "isLeader": true
+            },
+            {
+                "name": "오지우",
+                "major": "사이버보안학과",
+                "isLeader": false
+            }
+        ],
+        "title": "샘플 프로젝트 제목",
+        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
+        "category": "웹 개발",
+        "level": "비기너",
+        "thumbnail": "assets/images/sample_4x3.png",
+        "github": "https://github.com/sample/repo",
+        "demo": "https://sample-demo.vercel.app",
+        "ppt_img": [
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png"
+        ]
+    },
+    {
+        "id": "team-2",
+        "teamName": "sampleTeam",
+        "members": [
+            {
+                "name": "박찬미",
+                "major": "인공지능데이터사이언스학부",
+                "isLeader": true
+            },
+            {
+                "name": "허다연",
+                "major": "데이터사이언스전공",
+                "isLeader": false
+            },
+            {
+                "name": "오지우",
+                "major": "인공지능전공",
+                "isLeader": false
+            }
+        ],
+        "title": "두번째 샘플 프로젝트",
+        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
+        "category": "AI 모델 활용 프로젝트",
+        "level": "메이커",
+        "thumbnail": "assets/images/sample_4x3.png",
+        "github": "",
+        "demo": "",
+        "ppt_img": [
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png"
+        ]
+    },
+
+    {
+        "id": "team-1",
+        "teamName": "샘플팀",
+        "members": [
+            {
+                "name": "서유정",
+                "major": "컴퓨터공학과",
+                "isLeader": true
+            },
+            {
+                "name": "오지우",
+                "major": "사이버보안학과",
+                "isLeader": false
+            }
+        ],
+        "title": "샘플 프로젝트 제목",
+        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
+        "category": "웹 개발",
+        "level": "비기너",
+        "thumbnail": "assets/images/sample_4x3.png",
+        "github": "https://github.com/sample/repo",
+        "demo": "https://sample-demo.vercel.app",
+        "ppt_img": [
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png"
+        ]
+    },
+    {
+        "id": "team-2",
+        "teamName": "sampleTeam",
+        "members": [
+            {
+                "name": "박찬미",
+                "major": "인공지능데이터사이언스학부",
+                "isLeader": true
+            },
+            {
+                "name": "허다연",
+                "major": "데이터사이언스전공",
+                "isLeader": false
+            },
+            {
+                "name": "오지우",
+                "major": "인공지능전공",
+                "isLeader": false
+            }
+        ],
+        "title": "두번째 샘플 프로젝트",
+        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
+        "category": "AI 모델 활용 프로젝트",
+        "level": "메이커",
+        "thumbnail": "assets/images/sample_4x3.png",
+        "github": "",
+        "demo": "",
+        "ppt_img": [
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png"
+        ]
     }
 ]
