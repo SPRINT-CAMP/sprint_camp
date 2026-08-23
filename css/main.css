@@ -254,3 +254,15 @@ body {
     color: #ffffff;
     font-weight: 400;
 }
+
+/*모바일 뷰 세팅*/
+* {
+    box-sizing: border-box;
+}
+
+/*모바일용 css*/
+@media screen and (max-width: 768px) {
+    
+    
+
+}
