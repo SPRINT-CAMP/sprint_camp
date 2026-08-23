@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+}
+
+/* 필요시 패딩 수정*/
+.sum-page {
+    width: 100%;
+    margin: 0 auto;
+    padding: 35px 33px 124px;
+}
+
+.team-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
+}
+
+.sum-chips {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin-bottom: 69px;
+}
+
+.team-chips{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-start;
+}
+
+.team-chips .chip {
+    font-size: 24px;
+}
+
+.team-thumbnail {
+    grid-column: 1;
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: 0 0 30px 30px;
+    padding: 20px 26px;
+}
+
+.team-thumbnail img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+#team-title {
+    margin: 0 0;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.team-name {
+    margin: 0 0 8px;
+    color: #B3B3B3;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  align-items: center;
+  border-bottom: 1px solid #61646B;
+  padding-bottom: 30px;
+}
+
+/* 기본 드롭다운 스타일 */
+.filter-dropdown {
+  position: fixed;
+  z-index: 9999;
+  width: max-content;
+  min-width: 200px;
+  max-width: calc(100vw - 32px); /* 모바일 화면 좌우 여백 확보 */
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+  text-align: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #000000;
+  cursor: pointer;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+
+.dropdown-item:hover:not(.is-header) {
+  background-color: #f0f0f0;
+}
+
+.dropdown-item.is-header {
+  background-color: #ffb4b4;
+  color: #000000;
+  font-weight: 700;
+  cursor: default;
+}
+
+/* 📱 모바일 반응형 미디어 쿼리 */
+@media (max-width: 768px) {
+  .filter-dropdown {
+    min-width: 160px;
+  }
+
+  .dropdown-item {
+    min-height: 36px;
+    padding: 6px 12px;
+    font-size: 13px; /* 모바일용 글자 크기 축소 */
+  }
+}
