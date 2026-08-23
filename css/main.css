@@ -10,7 +10,12 @@ body {
 }
 
 section {
-    scroll-margin-top: 120px; /*섹션 이동 시 헤더만큼 여백*/
+    scroll-margin-top: 120px;
+    border-bottom: 2px solid #333333;
+}
+
+section:last-of-type {
+    border-bottom: none;
 }
 
 /*메인 배너(전시회) 섹션*/
