@@ -40,10 +40,27 @@
       content: '☰',
       onClick: () => {
         // 햄버거버튼
+        const navMenu = document.querySelector('.nav-links');
+        navMenu.classList.toggle('active');
       }
     }
     ]);
-  </script>
+
+    const iconGroup = document.querySelector('.icon-group');
+
+    if (iconGroup) {
+        const items = iconGroup.children;
+        
+        // hamburger-btn
+        const hamburger = items[items.length - 1];
+        hamburger.classList.add('hamburger-btn');
+
+        // nav-item
+        for(let i = 0; i < items.length - 1; i++) {
+            items[i].classList.add('nav-links');
+        }
+    }
+    </script>
 
     <main>
         <!--메인 배너(전시회)-->

@@ -9,6 +9,11 @@ body {
     color: #ffffff;
 }
 
+section {
+    scroll-margin-top: 120px; /*섹션 이동 시 헤더만큼 여백*/
+}
+
+/*메인 배너(전시회) 섹션*/
 #hero-section {
     display: flex;
     align-items: flex-start;
@@ -62,7 +67,7 @@ body {
     width: 100% !important;
 }
 
-/*개요(About) 섹션*/
+/*개요 섹션*/
 #about-section {
     width: 100%;
     box-sizing: border-box;
@@ -255,6 +260,16 @@ body {
     font-weight: 400;
 }
 
+/*PC 뷰 세팅*/
+
+.hamburger-btn {
+    display: none;
+}
+
+.nav-links {
+    display: flex; 
+}
+
 /*모바일 뷰 세팅*/
 * {
     box-sizing: border-box;
@@ -263,6 +278,27 @@ body {
 /*모바일용 css*/
 @media screen and (max-width: 768px) {
     
-    
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #000000;
+        position: absolute;
+        top: 120px;
+        left: 0;
+        padding: 20px 0;
+    }
 
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger-btn {
+        display: block; 
+        font-size: 28px; 
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: #ffffff;
+    }
 }
