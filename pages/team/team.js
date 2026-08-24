@@ -135,135 +135,48 @@ function renderPptImages(images) {
     const thumbnailContainer =
         document.querySelector('#ppt-thumbnails');
 
-    const prevButton =
-        document.querySelector('#ppt-prev');
-
-    const nextButton =
-        document.querySelector('#ppt-next');
-
-    const ITEMS_PER_VIEW = 5;
-
-    let startIndex = 0;
-
     let currentImageIndex = 0;
 
     mainImage.src = `../../${images[0]}`;
 
-    function renderThumbnails() {
+    images.forEach((image, index) => {
 
-        thumbnailContainer.innerHTML = '';
+        const button =
+            document.createElement('button');
 
-        const endIndex = Math.min(
-            startIndex + ITEMS_PER_VIEW,
-            images.length
-        );
+        button.type = 'button';
+        button.classList.add('ppt-thumbnail');
 
-        for (
-            let index = startIndex;
-            index < endIndex;
-            index++
-        ) {
-            const image = images[index];
-            const button =
-                document.createElement('button');
-
-            button.type = 'button';
-            button.classList.add('ppt-thumbnail');
-
-            if (index === currentImageIndex) {
-                button.classList.add('active');
-            }
-
-            const img =
-                document.createElement('img');
-            img.src = `../../${image}`;
-            img.alt =
-                `프로젝트 이미지 ${index + 1}`;
-            button.appendChild(img);
-
-            button.addEventListener('click', () => {
-                mainImage.src =
-                    `../../${image}`;
-
-                currentImageIndex = index;
-
-                document
-                    .querySelectorAll('.ppt-thumbnail')
-                    .forEach((item) => {
-                        item.classList.remove('active');
-                    });
-
-                button.classList.add('active');
-            });
-            thumbnailContainer.appendChild(button);
+        if (index === currentImageIndex) {
+            button.classList.add('active');
         }
 
-        updateSliderButtons();
-    }
+        const img =
+            document.createElement('img');
 
-    function updateSliderButtons() {
-        if (images.length <= ITEMS_PER_VIEW) {
-            prevButton.style.display = 'none';
-            nextButton.style.display = 'none';
-            return;
-        }
+        img.src = `../../${image}`;
+        img.alt = `프로젝트 이미지 ${index + 1}`;
 
-        prevButton.style.display = 'block';
-        nextButton.style.display = 'block';
+        button.appendChild(img);
 
-        prevButton.disabled =
-            startIndex === 0;
+        button.addEventListener('click', () => {
 
-        nextButton.disabled =
-            startIndex >=
-            images.length - ITEMS_PER_VIEW;
-    }
+            currentImageIndex = index;
 
-    prevButton.addEventListener('click', () => {
-
-        if (startIndex <= 0) {
-            return;
-        }
-
-        startIndex--;
-
-        const currentVisible =
-            currentImageIndex >= startIndex &&
-            currentImageIndex < startIndex + ITEMS_PER_VIEW;
-
-        if (!currentVisible) {
-            currentImageIndex = startIndex;
             mainImage.src =
                 `../../${images[currentImageIndex]}`;
-        }
 
-        renderThumbnails();
+            document
+                .querySelectorAll('.ppt-thumbnail')
+                .forEach((item) => {
+                    item.classList.remove('active');
+                });
+
+            button.classList.add('active');
+        });
+
+        thumbnailContainer.appendChild(button);
     });
-
-    nextButton.addEventListener('click', () => {
-        const maxStartIndex =
-            images.length - ITEMS_PER_VIEW;
-
-        if (startIndex >= maxStartIndex) {
-            return;
-        }
-
-        startIndex++;
-
-        const currentVisible =
-            currentImageIndex >= startIndex &&
-            currentImageIndex < startIndex + ITEMS_PER_VIEW;
-
-        if (!currentVisible) {
-            currentImageIndex = startIndex;
-            mainImage.src =
-                `../../${images[currentImageIndex]}`;
-        }
-
-        renderThumbnails();
-    });
-
-    renderThumbnails();
 }
 
 // TODO: 페이지 연결
