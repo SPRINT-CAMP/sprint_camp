@@ -1,0 +1,401 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+}
+
+.team-page {
+    width: 100%;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 60px 124px;
+}
+
+.team-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 60px;
+    align-items: start;
+}
+
+.team-chips {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.team-chips .chip {
+    font-size: 24px;
+}
+
+.team-thumbnail {
+    grid-column: 1;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.team-thumbnail img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.team-info {
+    grid-column: 2;
+    min-width: 0;
+}
+
+#team-title {
+    margin: 0 0 24px;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.team-name {
+    margin: 0 0 8px;
+    color: #B3B3B3;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.members {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.member-row {
+    display: flex;
+    gap: 10px;
+    font-size: 20px;
+}
+
+.member-label {
+    flex-shrink: 0;
+    color: #B3B3B3;
+    width: 35px;
+}
+
+.team-description {
+    margin: 0 0 24px;
+    font-size: 20px;
+    line-height: 1.3;
+    color: #fff;
+}
+
+.team-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.team-buttons .btn {
+    min-width: 150px;
+}
+
+.project-images {
+    margin-top: 60px;
+}
+
+.main-project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: #f1f1f1;
+}
+
+.main-project-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.ppt-slider {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.ppt-thumbnails {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 6px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+}
+
+.ppt-thumbnails::-webkit-scrollbar {
+    display: none;
+}
+
+.ppt-thumbnail {
+    flex: 0 0 calc((100% - 48px) / 5);
+    aspect-ratio: 4 / 3;
+    padding: 0;
+    border: 2px solid transparent;
+    background: #f1f1f1;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.ppt-thumbnail img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.ppt-thumbnail.active {
+    border-color: #ffffff;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+
+    .team-page {
+        padding: 40px 40px;
+    }
+
+    .team-intro {
+        gap: 20px 35px;
+    }
+
+    .team-chips {
+        gap: 10px;
+    }
+
+    .team-chips .chip {
+        font-size: 18px;
+        padding: 8px 14px;
+    }
+
+    #team-title {
+        margin-bottom: 18px;
+        font-size: 42px;
+    }
+
+    .team-name {
+        font-size: 20px;
+    }
+
+    .members {
+        gap: 6px;
+        margin-bottom: 18px;
+    }
+
+    .member-row {
+        font-size: 16px;
+        gap: 8px;
+    }
+
+    .member-label {
+        width: 32px;
+    }
+
+    .team-description {
+        margin-bottom: 18px;
+        font-size: 16px;
+        line-height: 1.4;
+    }
+
+    .team-buttons {
+        gap: 12px;
+    }
+
+    .team-buttons .btn {
+        min-width: 120px;
+        font-size: 16px;
+    }
+
+    .project-images {
+        margin-top: 70px;
+    }
+
+    .main-project-image {
+        aspect-ratio: 16 / 9;
+    }
+
+    .ppt-slider-button {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+
+    .ppt-thumbnails {
+        gap: 10px;
+        padding: 10px 4px;
+    }
+
+    .ppt-thumbnail {
+        flex: 0 0 calc((100% - 30px) / 4);
+    }
+
+    .header {
+        border-bottom-width: 2px;
+    }
+
+    .header-container {
+        padding: 30px 30px 0;
+        height: 120px;
+    }
+
+    .component-container {
+        height: 55px;
+    }
+
+    .header-logo {
+        font-size: 32px;
+    }
+
+    .icon-group {
+        height: 48px;
+        gap: 24px;
+    }
+
+    .icon-btn img,
+    .icon-btn svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .footer {
+        padding: 40px 50px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .team-page {
+        padding: 24px 20px;
+    }
+
+    .team-intro {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .team-chips {
+        width: 100%;
+        gap: 8px;
+        margin-bottom: 0;
+    }
+
+    .team-chips .chip {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .team-thumbnail {
+        width: 100%;
+    }
+
+    .team-info {
+        width: 100%;
+    }
+
+    #team-title {
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+
+    .team-name {
+        font-size: 16px;
+    }
+
+    .member-row {
+        font-size: 12px;
+        gap: 4px;
+    }
+
+    .team-description {
+        font-size: 12px;
+        line-height: 1.3;
+    }
+
+    .team-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .team-buttons .btn {
+        width: 100%;
+        min-width: 0;
+        font-size: 12px;
+    }
+
+    .team-buttons .btn-icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    .project-images {
+        margin-top: 40px;
+    }
+
+    .main-project-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .ppt-slider-button {
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+    }
+
+    .ppt-thumbnails {
+        gap: 8px;
+        padding: 8px 4px;
+    }
+
+    .ppt-thumbnail {
+        flex: 0 0 calc((100% - 16px) / 4);
+    }
+
+    .header {
+        border-bottom-width: 2px;
+    }
+
+    .header-container {
+        padding: 12px 30px;
+        height: 58px;
+    }
+
+    .component-container {
+        height: 24px;
+    }
+
+    .header-logo {
+        font-size: 20px;
+    }
+
+    .icon-group {
+        height: 24px;
+        gap: 16px;
+    }
+
+    .icon-btn img,
+    .icon-btn svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .footer {
+        padding: 50px 36px;
+        font-size: 12px;
+    }
+}
