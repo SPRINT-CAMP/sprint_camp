@@ -12,43 +12,7 @@
 </head>
 <body>
     <!--헤더-->
-    <script type="module">
-    import { renderHeader } from '../js/header.js';
-
-    renderHeader([
-    {
-    content: '[전시회]',
-    targetSection: 'hero-section' // 최상단 메인 배너로 이동
-    },
-    {
-    content: '[개요]',
-    targetSection: 'about-section' // SPRINT CAMP란? 섹션으로 이동
-    },
-    {
-    content: '[일정]',
-    targetSection: 'schedule-section' // 일정 섹션으로 이동
-    },
-    {
-    content: '[분야]',
-    targetSection: 'categories-section' // 분야 섹션으로 이동
-    },
-    {
-    content: '[트랙]',
-    targetSection: 'tracks-section' // 트랙 섹션으로 이동
-    },
-    {
-      content: '☰',
-      onClick: () => {
-        // 햄버거버튼
-        const iconGroup = document.querySelector('.icon-group');
-        if (iconGroup) {
-             iconGroup.classList.toggle('active');
-        }
-      }
-    }
-    ]);
-    </script>
-
+    
     <main>
         <!--메인 배너(전시회)-->
         <section id="hero-section">
@@ -62,20 +26,6 @@
                 <h2>SPRINT CAMP<br>온라인 전시회</h2>
                 <p class="hero-date">2026.09.03 - 2026.09.11</p>
                 <div id="button-container"></div>
-
-                <script type="module">import { createButton } from '../js/buttons.js';
-
-                    const container = document.getElementById('button-container');
-
-                    const resBtn = createButton('결과물 보러가기 →', {
-                    size: 'long',
-                    onClick: function() {
-                        location.href = 'team.html';
-                    }
-                    });
-
-                    container.append(resBtn);
-                </script>
             </div>
         </section>
 
@@ -228,9 +178,8 @@
     </main>
 
     <!--푸터-->
-    <script type="module">
-    import { renderFooter } from '../js/footer.js';
-    renderFooter();
-</script>
+
+    <!-- 자바스크립트 통합 로드 -->
+    <script type="module" src="../js/main.js"></script>
 </body>
 </html>
