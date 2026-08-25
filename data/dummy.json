@@ -66,7 +66,7 @@
     },
 
     {
-        "id": "team-1",
+        "id": "team-3",
         "teamName": "샘플팀",
         "members": [
             {
@@ -82,7 +82,7 @@
         ],
         "title": "샘플 프로젝트 제목",
         "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
-        "category": "웹 개발",
+        "category": "데이터 마이닝 및 분석",
         "level": "비기너",
         "thumbnail": "assets/images/sample_4x3.png",
         "github": "https://github.com/sample/repo",
@@ -95,7 +95,7 @@
         ]
     },
     {
-        "id": "team-2",
+        "id": "team-4",
         "teamName": "sampleTeam",
         "members": [
             {
@@ -116,7 +116,7 @@
         ],
         "title": "두번째 샘플 프로젝트",
         "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
-        "category": "AI 모델 활용 프로젝트",
+        "category": "로봇 개발",
         "level": "메이커",
         "thumbnail": "assets/images/sample_4x3.png",
         "github": "",
@@ -132,7 +132,7 @@
     },
 
     {
-        "id": "team-1",
+        "id": "team-5",
         "teamName": "샘플팀",
         "members": [
             {
@@ -148,7 +148,7 @@
         ],
         "title": "샘플 프로젝트 제목",
         "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
-        "category": "웹 개발",
+        "category": "프로그래밍 언어 학습",
         "level": "비기너",
         "thumbnail": "assets/images/sample_4x3.png",
         "github": "https://github.com/sample/repo",
@@ -161,7 +161,7 @@
         ]
     },
     {
-        "id": "team-2",
+        "id": "team-6",
         "teamName": "sampleTeam",
         "members": [
             {
@@ -182,7 +182,7 @@
         ],
         "title": "두번째 샘플 프로젝트",
         "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
-        "category": "AI 모델 활용 프로젝트",
+        "category": "시큐어 코딩 · 악성코드 분석",
         "level": "메이커",
         "thumbnail": "assets/images/sample_4x3.png",
         "github": "",

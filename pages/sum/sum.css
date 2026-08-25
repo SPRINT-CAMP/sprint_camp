@@ -94,7 +94,7 @@ body {
     gap: 6px;
 }
 
-#team-title {
+.team-title {
     margin: 0;
     font-size: clamp(16px, 1.4vw, 22px);
     font-weight: 400;
@@ -213,7 +213,7 @@ body {
         font-size: 16px;
     }
 
-    #team-title {
+    .team-title {
         font-size: 18px;
     }
 

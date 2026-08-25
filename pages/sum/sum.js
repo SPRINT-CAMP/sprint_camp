@@ -142,7 +142,7 @@ function createTeamCard(team) {
       <img src="${thumbnailPath}" alt="${team.title || '프로젝트'} 썸네일" />
     </div>
     <div class="team-info">
-      <h2 id="team-title">${team.title || ''}</h2>
+      <h2 class="team-title">${team.title || ''}</h2>
       <p class="team-name">${team.teamName || ''}</p>
     </div>
     <div class="team-chips"></div>
@@ -183,15 +183,56 @@ function renderFilteredTeams() {
     return;
   }
 
+  const categoryFilters = [];
+  const levelFilters = [];
+
+  let currentGroup = '';
+  filterList.forEach(item => {
+    if (item.isHeader) {
+      currentGroup = item.text;
+    } else if (activeFilters.has(item.text)) {
+      if (currentGroup === '분야') categoryFilters.push(item.text);
+      if (currentGroup === '트랙') levelFilters.push(item.text);
+    }
+  });
+
   const filteredTeams = allTeams.filter(team => {
-    return Array.from(activeFilters).every(filter => {
-      return team.level === filter || team.category === filter;
-    });
+  const matchesCategory = categoryFilters.length === 0 || categoryFilters.includes(team.category);
+    
+  const matchesLevel = levelFilters.length === 0 || levelFilters.includes(team.level);
+
+  return matchesCategory && matchesLevel;
   });
 
   filteredTeams.forEach(team => {
     teamSection.append(createTeamCard(team));
   });
+}
+
+// 간단한 토스트 알림 생성 함수
+function showToast(message) {
+  const toast = document.createElement('div');
+  toast.innerText = message;
+  Object.assign(toast.style, {
+    position: 'fixed',
+    top: '221px',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    backgroundColor: '#fff',
+    color: '#000',
+    padding: '12px 24px',
+    borderRadius: '25px',
+    boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
+    zIndex: '1000',
+    fontSize: '14px',
+  });
+
+  document.body.appendChild(toast);
+
+  setTimeout(() => {
+    toast.style.opacity = '0';
+    setTimeout(() => toast.remove(), 300);
+  }, 3000);
 }
 
 // 전체 데이터 불러오기 및 초기 실행
@@ -207,6 +248,8 @@ async function fetchAndRenderTeams() {
 
   } catch (error) {
     console.error('데이터 로드 실패:', error.message);
+    
+    showToast('데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
   }
 }
 
