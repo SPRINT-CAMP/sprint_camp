@@ -67,8 +67,8 @@ section:last-of-type {
 }
 
 .hero-text button, 
-.hero-text .button-container a, 
-.hero-text .button-container button {
+.hero-text #button-container a, 
+.hero-text #button-container button {
     width: 100% !important;
     font-size: 20px !important;
     padding: 18px 24px !important; 
