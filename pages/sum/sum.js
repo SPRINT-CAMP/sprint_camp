@@ -197,12 +197,20 @@ function renderFilteredTeams() {
   });
 
   const filteredTeams = allTeams.filter(team => {
-  const matchesCategory = categoryFilters.length === 0 || categoryFilters.includes(team.category);
-    
-  const matchesLevel = levelFilters.length === 0 || levelFilters.includes(team.level);
+    const matchesCategory = categoryFilters.length === 0 || categoryFilters.includes(team.category);
+    const matchesLevel = levelFilters.length === 0 || levelFilters.includes(team.level);
 
-  return matchesCategory && matchesLevel;
+    return matchesCategory && matchesLevel;
   });
+
+  if (filteredTeams.length === 0) {
+    const emptyMessage = document.createElement('div');
+    emptyMessage.className = 'empty-result';
+    emptyMessage.textContent = '검색 결과가 없습니다.';
+    
+    teamSection.append(emptyMessage);
+    return;
+  }
 
   filteredTeams.forEach(team => {
     teamSection.append(createTeamCard(team));
