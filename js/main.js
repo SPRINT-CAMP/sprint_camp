@@ -1,7 +1,3 @@
-import { inject } from "@vercel/analytics"
-
-inject()
-
 import { renderHeader } from './header.js';
 import { createButton } from './buttons.js';
 import { renderFooter } from './footer.js';
