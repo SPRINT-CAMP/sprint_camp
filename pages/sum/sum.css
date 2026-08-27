@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+}
+
+.sum-page {
+    width: 100%;
+    max-width: 1240px; 
+    margin: 0 auto;
+    padding: clamp(20px, 3vw, 40px) clamp(16px, 4vw, 50px) 124px;
+}
+
+.team-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: clamp(16px, 2.5vw, 36px);
+    width: 100%;
+}
+
+.sum-chips {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: clamp(8px, 1vw, 16px);
+    width: 100%;
+    margin-bottom: clamp(24px, 4vw, 50px);
+}
+
+
+.sum-chips .chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(4px, 0.6vw, 8px);
+
+    padding: clamp(6px, 0.8vw, 10px) clamp(12px, 1.2vw, 20px);
+    
+    font-size: clamp(13px, 1.1vw, 16px);
+    font-weight: 500;
+    border-radius: 9999px;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sum-chips .chip img {
+    width: clamp(12px, 1.1vw, 18px);
+    height: clamp(12px, 1.1vw, 18px);
+    object-fit: contain;
+}
+
+.sum-chips .chip .chip-icon {
+    width: clamp(12px, 1vw, 16px);
+    height: clamp(12px, 1vw, 16px);
+}
+
+.team-card {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 1.5vw, 24px);
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid #61646B;
+    padding-bottom: clamp(16px, 2vw, 30px);
+}
+
+.team-thumbnail {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 0 0 24px 24px;
+    padding: clamp(8px, 1.2vw, 20px);
+}
+
+.team-thumbnail img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+}
+
+.team-title {
+    margin: 0;
+    font-size: clamp(16px, 1.4vw, 22px);
+    font-weight: 400;
+}
+
+.team-name {
+    margin: 0 0 8px;
+    color: #B3B3B3;
+    font-size: clamp(14px, 1.2vw, 18px);
+    font-weight: 400;
+}
+
+.team-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+}
+
+.team-chips .chip {
+    font-size: clamp(11px, 0.9vw, 15px);
+}
+
+.filter-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    z-index: 100;
+    
+    width: max-content;
+    min-width: 180px;
+    max-width: calc(100vw - 32px);
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 36px;
+    padding: 6px 14px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #000000;
+    text-align: center;
+    background-color: #ffffff;
+    border-bottom: 1px solid #000000;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+.dropdown-item:hover:not(.is-header) {
+    background-color: #f0f0f0;
+}
+
+.dropdown-item.is-header {
+    background-color: #ffb4b4;
+    color: #000000;
+    font-weight: 700;
+    cursor: default;
+}
+
+.empty-result {
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 100px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #8c8c8c;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+    .team-section {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px 20px;
+    }
+
+    .sum-chips {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sum-page {
+        padding: 24px 16px 80px;
+    }
+
+    .team-section {
+        grid-template-columns: 1fr;
+        justify-items: center; 
+    }
+
+    .team-card {
+        max-width: 360px; 
+        padding-bottom: 20px;
+    }
+
+    .team-thumbnail {
+        max-height: 220px;
+        padding: 8px;
+    }
+
+    .team-thumbnail img {
+        object-fit: cover;
+    }
+
+    .sum-chips {
+        margin-bottom: 30px;
+        gap: 10px;
+    }
+
+    .team-chips .chip {
+        font-size: 16px;
+    }
+
+    .team-title {
+        font-size: 18px;
+    }
+
+    .team-name {
+        font-size: 18px;
+    }
+
+    .filter-dropdown {
+        min-width: 160px;
+    }
+
+    .dropdown-item {
+        min-height: 36px;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+}
