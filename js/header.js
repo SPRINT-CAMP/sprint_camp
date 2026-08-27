@@ -35,8 +35,8 @@ export function renderHeader(items = []) {
 
     button.addEventListener('click', (e) => {
       if (item.targetSection) {
-        const selector = item.targetSection.startsWith('#') 
-          ? item.targetSection 
+        const selector = item.targetSection.startsWith('#')
+          ? item.targetSection
           : `#${item.targetSection}`;
 
         const targetElement = document.querySelector(selector);
@@ -50,6 +50,48 @@ export function renderHeader(items = []) {
       }
     });
   });
+
+  const navItems = items
+    .map((item, index) => ({ item, index }))
+    .filter(({ item }) => item.targetSection);
+
+  if (navItems.length > 0) {
+    const setActive = (activeIndex) => {
+      buttons.forEach((button, index) => {
+        button.classList.toggle('active', index === activeIndex);
+      });
+    };
+
+    const updateActiveByScroll = () => {
+      const headerEl = document.querySelector('.header');
+      const offset = (headerEl ? headerEl.offsetHeight : 0) + 20;
+
+      let currentIndex = navItems[0].index;
+
+      navItems.forEach(({ item, index }) => {
+        const selector = item.targetSection.startsWith('#')
+          ? item.targetSection
+          : `#${item.targetSection}`;
+        const section = document.querySelector(selector);
+
+        if (section && section.getBoundingClientRect().top - offset <= 0) {
+          currentIndex = index;
+        }
+      });
+
+      const scrolledToBottom =
+        window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+
+      if (scrolledToBottom) {
+        currentIndex = navItems[navItems.length - 1].index;
+      }
+
+      setActive(currentIndex);
+    };
+
+    window.addEventListener('scroll', updateActiveByScroll, { passive: true });
+    updateActiveByScroll();
+  }
 }
 
 /*

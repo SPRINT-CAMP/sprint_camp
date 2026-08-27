@@ -1,0 +1,21 @@
+:root {
+    --bg: #0a0910;
+    --bg-soft: #121019;
+    --card-bg: #17151f;
+    --card-bg-hover: #1d1a29;
+
+    --border: rgba(255, 255, 255, .08);
+    --border-strong: rgba(196, 181, 253, .35);
+
+    --text: #f6f4fb;
+    --text-dim: #a49bc2;
+    --text-faint: #736a8f;
+
+    --lav: #b39ef3;
+    --lav-bright: #d9cdfc;
+    --lav-deep: #7c5cf0;
+
+    --grad: linear-gradient(135deg, #8b6ff2, #c9a4f7 40%, #e9d8ff);
+
+    --shadow-glow: 0 14px 30px -10px rgba(139, 111, 242, .55);
+}
