@@ -411,12 +411,12 @@ section:last-of-type {
     }
 
     .hero-text {
-        width: 55% !important; 
+        width: 90% !important; 
         max-width: 320px !important; 
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        text-align: left !important;
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .hero-text h2 {
