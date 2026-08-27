@@ -32,7 +32,7 @@ if (container) {
     const resBtn = createButton('결과물 보러가기 →', {
         size: 'long',
         onClick: function () {
-            location.href = 'team.html';
+            location.href = 'sum/sum.html';
         }
     });
     container.append(resBtn);
