@@ -223,7 +223,7 @@ body {
         gap: 10px;
     }
 
-    /* .team-chips .chip {
+    .team-chips .chip {
         font-size: 16px;
     }
 
@@ -233,7 +233,7 @@ body {
 
     .team-name {
         font-size: 18px;
-    } */
+    }
 
     .filter-dropdown {
         min-width: 160px;
