@@ -98,7 +98,11 @@ function setupSumChips() {
       iconSrc: '../../assets/images/filter.png',
       iconPosition: 'left',
       onClick: (e) => {
-        const target = e.currentTarget || filterChip;
+        console.log('전달된 e:', e); // 👈 e 상태 확인용
+  
+        const target = e?.currentTarget || e?.target;
+        console.log('최종 계산된 target:', target);
+        
         toggleDropdown(target, (selectedText) => {
           activeFilters.add(selectedText);
           renderChipsArea();
