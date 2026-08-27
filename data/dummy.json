@@ -1,26 +1,31 @@
 [
     {
         "id": "team-1",
-        "teamName": "샘플팀",
+        "teamName": "버그잡조",
         "members": [
             {
-                "name": "서유정",
+                "name": "이예안",
                 "major": "컴퓨터공학과",
+                "isLeader": false
+            },
+            {
+                "name": "임유진",
+                "major": "사이버보안학과",
                 "isLeader": true
             },
             {
-                "name": "오지우",
+                "name": "조여언",
                 "major": "사이버보안학과",
                 "isLeader": false
             }
         ],
-        "title": "샘플 프로젝트 제목",
-        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
-        "category": "웹 개발",
+        "title": "Security Scanner",
+        "description": "소스코드와 파일을 대상으로 세 가지 정적 보안 검사를 수행하는 TUI 도구입니다. API 키·개인키·비밀번호·eval/exec 위험 패턴을 정규식으로 탐지하는 시크릿 스캐너, SQL 인젝션 취약 쿼리를 찾는 SQL 스캐너, 파일 해시를 DB와 대조해 악성코드를 탐지하는 스캐너로 구성됩니다. MalwareBazaar CSV로 시그니처 DB도 구축 가능합니다.",
+        "category": "시큐어 코딩 · 악성코드 분석",
         "level": "비기너",
         "thumbnail": "assets/images/sample_4x3.png",
-        "github": "https://github.com/sample/repo",
-        "demo": "https://sample-demo.vercel.app",
+        "github": "",
+        "demo": "",
         "ppt_img": [
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",
@@ -30,26 +35,21 @@
     },
     {
         "id": "team-2",
-        "teamName": "sampleTeam",
+        "teamName": "Run Time",
         "members": [
             {
-                "name": "박찬미",
-                "major": "인공지능데이터사이언스학부",
+                "name": "장서연",
+                "major": "데이터사이언스전공",
                 "isLeader": true
             },
             {
-                "name": "허다연",
-                "major": "데이터사이언스전공",
-                "isLeader": false
-            },
-            {
-                "name": "오지우",
-                "major": "인공지능전공",
+                "name": "김유민",
+                "major": "컴퓨터공학과",
                 "isLeader": false
             }
         ],
-        "title": "두번째 샘플 프로젝트",
-        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
+        "title": "arxiv 논문 추천 시스템",
+        "description": "내 연구 관심사를 문장으로 적으면 1년 내의 arXiv 논문 중 나에게 딱 맞는 것만 골라 추천해 주는 서비스입니다. 관심 없는 주제는 알아서 걸러주고, 👍·👎만 남기면 취향을 학습해 추천이 점점 개인화되며, 좋았던 논문은 북마크해 둘 수 있습니다.",
         "category": "AI 모델 활용 프로젝트",
         "level": "메이커",
         "thumbnail": "assets/images/sample_4x3.png",
@@ -59,34 +59,46 @@
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png"
         ]
     },
-
     {
         "id": "team-3",
-        "teamName": "샘플팀",
+        "teamName": "디브러리",
         "members": [
             {
-                "name": "서유정",
+                "name": "이예안",
                 "major": "컴퓨터공학과",
                 "isLeader": true
             },
             {
-                "name": "오지우",
+                "name": "김유나",
+                "major": "컴퓨터공학과",
+                "isLeader": false
+            },
+            {
+                "name": "윤한솔",
+                "major": "컴퓨터공학과",
+                "isLeader": false
+            },
+            {
+                "name": "노현승",
+                "major": "컴퓨터공학과",
+                "isLeader": false
+            },
+            {
+                "name": "강서연",
                 "major": "사이버보안학과",
                 "isLeader": false
             }
         ],
-        "title": "샘플 프로젝트 제목",
-        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
-        "category": "데이터 마이닝 및 분석",
+        "title": "웹/앱 스터디 및 X 클론 코딩",
+        "description": "웹/앱 개발 역량을 강화하기 위해 실동작 서비스인 X(구 트위터)의 핵심 기능을 직접 구현하였습니다. 회원가입과 인증부터 피드 생성, 좋아요, 팔로우까지 상용 서비스의 전체 데이터 흐름을 프론트엔드와 백엔드로 나누어 직접 개발하였습니다. 반응형 웹 UI를 경험하며 무한 스크롤, 상태 관리, API 연동 등 실무에 필수적인 기술을 습득하고 완성도 높은 기술 스택 활용 능력을 기르는 것을 목표로 프로젝트를 진행하였습니다.",
+        "category": "웹 개발",
         "level": "비기너",
         "thumbnail": "assets/images/sample_4x3.png",
-        "github": "https://github.com/sample/repo",
-        "demo": "https://sample-demo.vercel.app",
+        "github": "",
+        "demo": "",
         "ppt_img": [
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",
@@ -96,26 +108,26 @@
     },
     {
         "id": "team-4",
-        "teamName": "sampleTeam",
+        "teamName": "MovEdge",
         "members": [
             {
-                "name": "박찬미",
-                "major": "인공지능데이터사이언스학부",
+                "name": "최다현",
+                "major": "인공지능학과",
                 "isLeader": true
             },
             {
-                "name": "허다연",
-                "major": "데이터사이언스전공",
+                "name": "배지혜",
+                "major": "인공지능학과",
                 "isLeader": false
             },
             {
-                "name": "오지우",
-                "major": "인공지능전공",
+                "name": "곽다현",
+                "major": "인공지능학과",
                 "isLeader": false
             }
         ],
-        "title": "두번째 샘플 프로젝트",
-        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
+        "title": "ROS2·TurtleBot3를 활용한 음성 명령 로봇의 Sim2Real 분석 및 개선",
+        "description": "본 프로젝트는 ROS2·Gazebo 기반 음성 명령 로봇 제어 시스템을 실제 TurtleBot3 Waffle Pi에 적용하여 Sim2Real 과정에서 발생하는 차이를 분석·개선하였다. 실제 로봇 환경을 구축하고 센서 및 네트워크를 연동했으며, ReSpeaker 마이크 어레이를 활용한 음성 입력과 음원 방향 추정 기능을 구현하였다. 이를 통해 시뮬레이션과 실제 환경에서의 시스템 동작 차이를 확인하고 실제 로봇에서 검증하였다.",
         "category": "로봇 개발",
         "level": "메이커",
         "thumbnail": "assets/images/sample_4x3.png",
@@ -125,34 +137,41 @@
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png"
         ]
     },
-
     {
         "id": "team-5",
-        "teamName": "샘플팀",
+        "teamName": "진급팟",
         "members": [
             {
-                "name": "서유정",
-                "major": "컴퓨터공학과",
+                "name": "강나윤",
+                "major": "사이버보안학과",
                 "isLeader": true
             },
             {
-                "name": "오지우",
+                "name": "남의경",
+                "major": "사이버보안학과",
+                "isLeader": false
+            },
+            {
+                "name": "송지현",
+                "major": "사이버보안학과",
+                "isLeader": false
+            },
+            {
+                "name": "정아윤",
                 "major": "사이버보안학과",
                 "isLeader": false
             }
         ],
-        "title": "샘플 프로젝트 제목",
-        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
-        "category": "프로그래밍 언어 학습",
+        "title": "웹 애플리케이션 공격 시나리오 기반 침해 탐지 체계 구축",
+        "description": "DVWA를 대상으로 SQLi·XSS·CSRF·IDOR 공격을 재현하고 Wireshark로 트래픽을 분석한 뒤, Snort·Suricata 커스텀 탐지 룰을 작성·검증했습니다. 공격 pcap 기준 SQLi/XSS는 높은 탐지율을, CSRF·IDOR은 시그니처 IDS의 한계를 확인했으며, 정상 트래픽으로 오탐률을 측정하고 개선 방향을 제시합니다.",
+        "category": "시큐어 코딩 · 악성코드 분석",
         "level": "비기너",
         "thumbnail": "assets/images/sample_4x3.png",
-        "github": "https://github.com/sample/repo",
-        "demo": "https://sample-demo.vercel.app",
+        "github": "",
+        "demo": "",
         "ppt_img": [
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",
@@ -162,34 +181,192 @@
     },
     {
         "id": "team-6",
-        "teamName": "sampleTeam",
+        "teamName": "러닝메이트",
         "members": [
             {
-                "name": "박찬미",
+                "name": "한예원",
                 "major": "인공지능데이터사이언스학부",
                 "isLeader": true
             },
             {
-                "name": "허다연",
-                "major": "데이터사이언스전공",
+                "name": "정재은",
+                "major": "인공지능데이터사이언스학부",
                 "isLeader": false
             },
             {
-                "name": "오지우",
-                "major": "인공지능전공",
+                "name": "박하은",
+                "major": "인공지능데이터사이언스학부",
                 "isLeader": false
             }
         ],
-        "title": "두번째 샘플 프로젝트",
-        "description": "여기는 프로젝트에 대한 설명이 들어가는 자리입니다.",
-        "category": "시큐어 코딩 · 악성코드 분석",
-        "level": "메이커",
+        "title": "오늘 뭐 먹지? 당신을 위한 오늘의 메뉴 추천!",
+        "description": "'아, 오늘 뭐 먹지?' 하루에 세 번은 겪는 고뇌의 시간을 해결해 주는 음식 추천 프로그램입니다! 당신의 기분, 날씨, 현재 시간, 새로운 음식에 대한 도전 정신을 바탕으로 당신에게 가장 알맞은 메뉴를 최대 3가지로 추천해 드립니다. 맛과 식감부터 자극적인 정도, 생소함의 단계까지 꼼꼼하게 계산해 맞춤형으로 제안합니다.",
+        "category": "프로그래밍 언어 학습",
+        "level": "비기너",
         "thumbnail": "assets/images/sample_4x3.png",
         "github": "",
         "demo": "",
         "ppt_img": [
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png"
+        ]
+    },
+    {
+        "id": "team-7",
+        "teamName": "스터기니",
+        "members": [
+            {
+                "name": "정은아",
+                "major": "컴퓨터공학과",
+                "isLeader": true
+            },
+            {
+                "name": "나세아",
+                "major": "컴퓨터공학과",
+                "isLeader": false
+            }
+        ],
+        "title": "스터기니",
+        "description": "'스터기니'는 스터디 그룹을 위한 일정 조율 및 노트 공유 웹입니다. 팀원 간의 가능 시간을 취합해 최적의 스터디 일정을 찾아주는 조율 기능과 주차별 노트 작성 및 댓글 피드백 기능, 그리고 스터디 멤버 전체와 각각의 일정 관리 기능에 집중했습니다. 로컬 스토리지 기반으로 데이터를 안전하게 관리하며, 다크모드와 커스텀 알림창을 적용해 최적의 사용자 경험(UX)을 제공합니다.",
+        "category": "프로그래밍 언어 학습",
+        "level": "비기너",
+        "thumbnail": "assets/images/sample_4x3.png",
+        "github": "",
+        "demo": "",
+        "ppt_img": [
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png"
+        ]
+    },
+    {
+        "id": "team-8",
+        "teamName": "전지적 관리자 시점",
+        "members": [
+            {
+                "name": "최지수",
+                "major": "사이버보안학과",
+                "isLeader": true
+            },
+            {
+                "name": "박소현",
+                "major": "사이버보안학과",
+                "isLeader": false
+            }
+        ],
+        "title": "FirstSec",
+        "description": "FirstSec는 보안 입문자를 위한 웹사이트로, 보안 공부를 하고싶지만 갈피를 잡지 못하는 입문자분들을 위해 필요한 개념들부터 차근차근 학습할 수 있게 하였습니다. 저희는 특히 웹 보안에 더 주목하여 주요 웹 보안 취약점들에 대한 개념 설명과 코드 분석, 미니게임까지 단계별로 구성되어 있어, 보안 지식이 없는 초보자도 쉽고 재미있게 웹 보안의 핵심 원리를 이해할 수 있습니다.",
+        "category": "웹 개발",
+        "level": "비기너",
+        "thumbnail": "assets/images/sample_4x3.png",
+        "github": "",
+        "demo": "",
+        "ppt_img": [
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png"
+        ]
+    },
+    {
+        "id": "team-9",
+        "teamName": "Root4",
+        "members": [
+            {
+                "name": "박재선",
+                "major": "사이버보안학과",
+                "isLeader": true
+            },
+            {
+                "name": "김유민",
+                "major": "사이버보안학과",
+                "isLeader": false
+            },
+            {
+                "name": "유현지",
+                "major": "사이버보안학과",
+                "isLeader": false
+            },
+            {
+                "name": "조해인",
+                "major": "사이버보안학과",
+                "isLeader": false
+            }
+        ],
+        "title": "Webshell 및 SQL injection 공격 분석을 통한 시큐어 코딩 방어 웹사이트 구현",
+        "description": "SQL Injection과 웹쉘 파일 업로드 취약점을 직접 구현하고 공격 과정을 실습한 뒤, Prepared Statement, 비밀번호 해시화, 파일 검증 등의 시큐어 코딩을 적용하였다. 이후 동일한 공격을 재시도하여 보안 적용 전후의 차이와 방어 효과를 확인하는 웹 보안 실습 프로젝트이다.",
+        "category": "시큐어 코딩 · 악성코드 분석",
+        "level": "비기너",
+        "thumbnail": "assets/images/sample_4x3.png",
+        "github": "",
+        "demo": "",
+        "ppt_img": [
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png"
+        ]
+    },
+    {
+        "id": "team-10",
+        "teamName": "To-morrow",
+        "members": [
+            {
+                "name": "유지수",
+                "major": "인공지능데이터사이언스학부",
+                "isLeader": true
+            },
+            {
+                "name": "이아영",
+                "major": "인공지능데이터사이언스학부",
+                "isLeader": false
+            }
+        ],
+        "title": "AI를 활용한 학생 성적 예측 가능성 분석",
+        "description": "본 프로젝트는 '학생의 정보로 최종 성적을 예측할 수 있는가, 어떤 요인이 핵심인가'를 확인하는 것을 목표로, 학생 성적 데이터(395명, 33변수)를 RStudio로 분석해, EDA에서 직전 성적(G1과 G2)이 최종 성적과 가장 밀접함을 확인하고, 선형회귀, 랜덤포레스트, SVR을 비교해 보니 선형회귀 모델이 가장 낮은 오차를 보였다. 나아가 G1과 G2 제외 실험(결정계수의 차이, 0.74→0.14)으로, 성적 예측이 직전 성적에 크게 의존하며 배경 변수만으로는 예측이 어렵다는 것을 규명했다.",
+        "category": "데이터 마이닝 및 분석",
+        "level": "비기너",
+        "thumbnail": "assets/images/sample_4x3.png",
+        "github": "",
+        "demo": "",
+        "ppt_img": [
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png",
+            "assets/images/sample_4x3.png"
+        ]
+    },
+    {
+        "id": "team-11",
+        "teamName": "데자와",
+        "members": [
+            {
+                "name": "정유진",
+                "major": "컴퓨터공학과",
+                "isLeader": true
+            },
+            {
+                "name": "복지희",
+                "major": "컴퓨터공학과",
+                "isLeader": false
+            },
+            {
+                "name": "우윤수",
+                "major": "컴퓨터공학과",
+                "isLeader": false
+            }
+        ],
+        "title": "Java 알고리즘 라이브러리",
+        "description": "Java를 기반으로 트리, 그래프, 동적 계획법(DP) 등 주요 자료구조와 알고리즘을 직접 구현한 라이브러리 프로젝트입니다. 자주 사용되는 알고리즘을 모듈화하고 일관된 인터페이스로 설계하여 코드의 재사용성과 유지보수성을 높였으며, 다양한 알고리즘 문제에 빠르고 효율적으로 적용할 수 있도록 구성했습니다.",
+        "category": "프로그래밍 언어 학습",
+        "level": "메이커",
+        "thumbnail": "assets/images/sample_4x3.png",
+        "github": "",
+        "demo": "",
+        "ppt_img": [
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",
             "assets/images/sample_4x3.png",

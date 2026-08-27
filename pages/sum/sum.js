@@ -7,7 +7,7 @@ renderHeader([
   {
     content: '../../assets/images/main.svg',
     onClick: () => {
-      window.location.href = '../../index.html';
+      window.location.href = '../main.html';
     }
   }
 ]);
@@ -99,10 +99,10 @@ function setupSumChips() {
       iconPosition: 'left',
       onClick: (e) => {
         console.log('전달된 e:', e); // 👈 e 상태 확인용
-  
+
         const target = e?.currentTarget || e?.target;
         console.log('최종 계산된 target:', target);
-        
+
         toggleDropdown(target, (selectedText) => {
           activeFilters.add(selectedText);
           renderChipsArea();
@@ -136,6 +136,12 @@ function setupSumChips() {
 function createTeamCard(team) {
   const card = document.createElement('article');
   card.className = 'team-card';
+  card.style.cursor = 'pointer';
+
+  // 카드 클릭 시 해당 팀의 상세페이지로 이동 (id 쿼리파라미터 전달)
+  card.addEventListener('click', () => {
+    window.location.href = `../team/team.html?id=${encodeURIComponent(team.id)}`;
+  });
 
   const thumbnailPath = team.thumbnail && team.thumbnail.startsWith('../../')
     ? team.thumbnail
@@ -211,7 +217,7 @@ function renderFilteredTeams() {
     const emptyMessage = document.createElement('div');
     emptyMessage.className = 'empty-result';
     emptyMessage.textContent = '검색 결과가 없습니다.';
-    
+
     teamSection.append(emptyMessage);
     return;
   }
@@ -260,7 +266,7 @@ async function fetchAndRenderTeams() {
 
   } catch (error) {
     console.error('데이터 로드 실패:', error.message);
-    
+
     showToast('데이터를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
   }
 }

@@ -179,22 +179,14 @@ function renderPptImages(images) {
     });
 }
 
-// TODO: 페이지 연결
 renderHeader([
     {
         content: '../../assets/images/main.svg',
-
-        onClick: () => {
-            window.location.href = '../../index.html';
-        }
+        onClick: () => { window.location.href = '../main.html'; }
     },
-
     {
         content: '../../assets/images/list.svg',
-
-        onClick: () => {
-            window.location.href = '../../index.html';
-        }
+        onClick: () => { window.location.href = '../sum/sum.html'; }
     }
 ]);
 

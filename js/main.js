@@ -3,7 +3,7 @@ import { createButton } from './buttons.js';
 import { renderFooter } from './footer.js';
 
 if ('scrollRestoration' in history) {
-  history.scrollRestoration = 'manual';
+    history.scrollRestoration = 'manual';
 }
 window.scrollTo(0, 0);
 
@@ -30,8 +30,8 @@ const container = document.getElementById('button-container');
 if (container) {
     const resBtn = createButton('결과물 보러가기 →', {
         size: 'long',
-        onClick: function() {
-            location.href = 'team.html';
+        onClick: function () {
+            location.href = 'sum/sum.html';
         }
     });
     container.append(resBtn);
