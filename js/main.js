@@ -9,11 +9,11 @@ window.scrollTo(0, 0);
 
 // 헤더 렌더링
 renderHeader([
-    { content: '[전시회]', targetSection: 'hero-section' },
-    { content: '[개요]', targetSection: 'about-section' },
-    { content: '[일정]', targetSection: 'schedule-section' },
-    { content: '[분야]', targetSection: 'categories-section' },
-    { content: '[트랙]', targetSection: 'tracks-section' },
+    { content: '전시회', targetSection: 'hero-section' },
+    { content: '개요', targetSection: 'about-section' },
+    { content: '일정', targetSection: 'schedule-section' },
+    { content: '분야', targetSection: 'categories-section' },
+    { content: '트랙', targetSection: 'tracks-section' },
     {
         content: '☰',
         onClick: () => {

@@ -2,29 +2,38 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 16px;
-    font-size: 24px;
+    padding: 6px 13px;
+    font-size: 14px;
     border-radius: 46px;
-    border: 1px solid #C0C0C0;
-    background-color: transparent;
-    color: #ffffff;
-    cursor: pointer;
+    border: 1px solid var(--border-strong);
+    background-color: rgba(139, 111, 242, .06);
+    color: var(--text);
+    /* cursor: pointer; */
     gap: 4px;
+    transition: background-color .2s, border-color .2s, color .2s;
 }
 
-/*»èÁ¦ °¡´ÉÇÑ Ä¨*/
+/* .chip:hover {
+    background-color: rgba(139, 111, 242, .14);
+    border-color: var(--lav);
+} */
+
+/*ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä¨*/
 .chip.chip-purple {
-    background-color: #6068B2;
+    background: var(--lav);
+    color: #12101a;
+    border: none;
+    font-weight: 700;
 }
 
-/*Èò ¹è°æ Ä¨*/
+/*ï¿½ï¿½ ï¿½ï¿½ï¿½ Ä¨*/
 .chip.chip-white {
-    background-color: #ffffff;
-    color: #000000;
+    background-color: var(--text);
+    color: var(--bg);
 }
 
-/* ¾ÆÀÌÄÜ Å©±â Á¶Àý */
+/* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Å©ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ */
 .chip-icon {
-    width: 30px;
-    height: 30px;
+    width: 18px;
+    height: 18px;
 }

@@ -37,7 +37,7 @@ async function renderTeamPage() {
 
         document.querySelector('#team-title').textContent = team.title;
 
-        document.querySelector('#team-name').textContent = `team ${team.teamName}`;
+        document.querySelector('#team-name').textContent = team.teamName;
 
         document.querySelector('#team-description').textContent =
             team.description;
