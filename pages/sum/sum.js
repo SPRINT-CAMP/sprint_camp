@@ -3,14 +3,16 @@ import { renderFooter } from '../../js/footer.js';
 import { createChip } from '../../js/chips.js';
 
 // 헤더 및 푸터 렌더링
-renderHeader([
-  {
-    content: '../../assets/images/main.svg',
-    onClick: () => {
-      window.location.href = '../main.html';
+renderHeader({
+  action: [
+    {
+      content: '../../assets/images/main.svg',
+      onClick: () => {
+        window.location.href = '../main.html';
+      }
     }
-  }
-]);
+  ]
+});
 
 renderFooter();
 

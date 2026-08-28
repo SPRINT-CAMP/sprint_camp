@@ -261,34 +261,6 @@ body {
         flex: 0 0 calc((100% - 30px) / 4);
     }
 
-    .header {
-        border-bottom-width: 2px;
-    }
-
-    .header-container {
-        padding: 30px 30px 0;
-        height: 120px;
-    }
-
-    .component-container {
-        height: 55px;
-    }
-
-    .header-logo {
-        font-size: 32px;
-    }
-
-    .icon-group {
-        height: 48px;
-        gap: 24px;
-    }
-
-    .icon-btn img,
-    .icon-btn svg {
-        width: 48px;
-        height: 48px;
-    }
-
     .footer {
         padding: 40px 50px;
         font-size: 18px;
@@ -384,41 +356,9 @@ body {
         flex: 0 0 calc((100% - 16px) / 4);
     }
 
-    .header {
-        border-bottom-width: 2px;
-    }
-
-    .header-container {
-        padding: 12px 30px;
-        height: 58px;
-    }
-
-    .component-container {
-        height: 24px;
-    }
-
-    .header-logo {
-        font-size: 20px;
-    }
-
-    .icon-group {
-        height: 24px;
-        gap: 16px;
-    }
-
-    .icon-btn img,
-    .icon-btn svg {
-        width: 24px;
-        height: 24px;
-    }
-
     .footer {
         padding: 50px 36px;
         font-size: 12px;
-    }
-
-    .header .icon-group {
-        margin-right: 0px;
     }
 }
 

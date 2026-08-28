@@ -179,16 +179,18 @@ function renderPptImages(images) {
     });
 }
 
-renderHeader([
-    {
-        content: '../../assets/images/main.svg',
-        onClick: () => { window.location.href = '../main.html'; }
-    },
-    {
-        content: '../../assets/images/list.svg',
-        onClick: () => { window.location.href = '../sum/sum.html'; }
-    }
-]);
+renderHeader({
+    action: [
+        {
+            content: '../../assets/images/main.svg',
+            onClick: () => { window.location.href = '../main.html'; }
+        },
+        {
+            content: '../../assets/images/list.svg',
+            onClick: () => { window.location.href = '../sum/sum.html'; }
+        }
+    ]
+});
 
 renderFooter();
 
