@@ -8,22 +8,21 @@ if ('scrollRestoration' in history) {
 }
 window.scrollTo(0, 0);
 
-// 헤더 렌더링
+const navItems = [
+    { content: '전시회', targetSection: 'hero-section' },
+    { content: '개요', targetSection: 'about-section' },
+    { content: '일정', targetSection: 'schedule-section' },
+    { content: '분야', targetSection: 'categories-section' },
+    { content: '트랙', targetSection: 'tracks-section' }
+];
+
+// 헤더 렌더링 (데스크탑: 텍스트 nav, 모바일: 결과물 목록 아이콘만)
 renderHeader({
     action: [
-        { content: '전시회', targetSection: 'hero-section' },
-        { content: '개요', targetSection: 'about-section' },
-        { content: '일정', targetSection: 'schedule-section' },
-        { content: '분야', targetSection: 'categories-section' },
-        { content: '트랙', targetSection: 'tracks-section' },
+        ...navItems,
         {
-            content: '☰',
-            onClick: () => {
-                const iconGroup = document.querySelector('.icon-group');
-                if (iconGroup) {
-                    iconGroup.classList.toggle('active');
-                }
-            }
+            content: '../assets/images/list.svg',
+            onClick: () => { location.href = 'sum/sum.html'; }
         }
     ]
 });
