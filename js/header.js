@@ -1,7 +1,7 @@
-export function renderHeader(items = []) {
+export function renderHeader({ title = 'SPRINT CAMP', action = [] } = {}) {
 
   // HTML 버튼 태그 생성 (data-index 부여)
-  const itemsHTML = items
+  const actionHTML = action
     .map((item, index) => {
       // .svg, .png 등 이미지 경로인지 확인
       const isImage = typeof item.content === 'string' && /\.(svg|png|jpg|jpeg|webp)$/i.test(item.content.trim());
@@ -16,9 +16,9 @@ export function renderHeader(items = []) {
     <header class="header">
       <div class="header-container">
         <div class="component-container">
-          <div class="header-logo">SPRINT CAMP</div>
+          <div class="header-logo">${title}</div>
           <div class="icon-group">
-            ${itemsHTML}
+            ${actionHTML}
           </div>
         </div>
       </div>
@@ -31,7 +31,7 @@ export function renderHeader(items = []) {
   // 생성된 버튼들에 클릭 이벤트 바인딩
   const buttons = document.querySelectorAll('.header .icon-btn');
   buttons.forEach((button, index) => {
-    const item = items[index];
+    const item = action[index];
 
     button.addEventListener('click', (e) => {
       if (item.targetSection) {
@@ -51,7 +51,7 @@ export function renderHeader(items = []) {
     });
   });
 
-  const navItems = items
+  const navItems = action
     .map((item, index) => ({ item, index }))
     .filter(({ item }) => item.targetSection);
 
@@ -108,18 +108,21 @@ export function renderHeader(items = []) {
   <script type="module">
     import { renderHeader } from './js/header.js';
 
-    renderHeader([
-    {
-      content: '[목록]',
-      targetSection: 'sec-11' // 이동하려는 section의 id 입력 (예: 'sec-11')
-    },
-    {
-      content: './assets/images/main.svg',
-      onClick: () => {
-        location.href = 'main.html'; //이동하려는 페이지 경로 입력 (예: 'main.html')
-      }
-    }
-    ]);
+    renderHeader({
+      // title 생략 시 기본값 'SPRINT CAMP'
+      action: [
+        {
+          content: '[목록]',
+          targetSection: 'sec-11' // 이동하려는 section의 id 입력 (예: 'sec-11')
+        },
+        {
+          content: './assets/images/main.svg',
+          onClick: () => {
+            location.href = 'main.html'; //이동하려는 페이지 경로 입력 (예: 'main.html')
+          }
+        }
+      ]
+    });
   </script>
 </body>
 */

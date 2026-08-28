@@ -57,7 +57,6 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    padding-bottom: 6px;
 }
 
 .icon-btn:hover {
@@ -84,8 +83,28 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: -6px;
     height: 2px;
     border-radius: 2px;
     background: var(--grad);
+}
+
+/* 모바일 공통 헤더 규격 (모든 페이지 동일하게 적용) */
+@media screen and (max-width: 768px) {
+    .header {
+        border-bottom-width: 2px;
+    }
+
+    .header-container {
+        height: 58px;
+        padding: 12px 30px;
+    }
+
+    .component-container {
+        height: 100%;
+    }
+
+    .header-logo {
+        font-size: 20px;
+    }
 }

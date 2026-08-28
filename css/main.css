@@ -1,4 +1,5 @@
 body {
+    margin: 0;
     background-color: var(--bg);
     color: var(--text);
 }
@@ -357,20 +358,16 @@ section:last-of-type {
 
 /*모바일용 css*/
 @media screen and (max-width: 768px) {
-    .header-container {
-        height: auto !important;
-        padding: 0 20px !important;
-    }
 
     .component-container {
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        height: 58px !important;
+        margin: 0 !important;
+        position: static !important;
     }
 
     .header-logo {
-        font-size: 18px !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        position: relative !important;
     }
 
     .icon-btn {
@@ -378,30 +375,7 @@ section:last-of-type {
     }
 
     .icon-btn:last-child {
-        display: block !important;
-        font-size: 24px !important;
-        color: var(--text) !important;
-    }
-
-    .icon-group.active {
-        position: absolute !important;
-        top: 58px !important;
-        left: 0 !important;
-        width: 100% !important;
-        background-color: var(--bg-soft) !important;
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        padding: 16px 10px !important;
-        gap: 16px !important;
-        z-index: 9999 !important;
-        border-bottom: 1px solid var(--border) !important;
-    }
-
-    .icon-group.active .icon-btn:not(:last-child) {
-        display: block !important;
-        font-size: 14px !important;
-        color: var(--text-faint) !important;
+        display: inline-flex !important;
     }
 
     section {

@@ -281,17 +281,4 @@ body {
         padding: 6px 12px;
         font-size: 13px;
     }
-
-    .header {
-        border-bottom-width: 2px;
-    }
-
-    .header-container {
-        padding: 12px 30px;
-        height: 58px;
-    }
-
-    .header-logo {
-        font-size: 20px;
-    }
 }
