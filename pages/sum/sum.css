@@ -30,7 +30,7 @@ body {
     align-items: center;
     gap: clamp(8px, 1vw, 16px);
     width: 100%;
-    margin-bottom: clamp(24px, 4vw, 50px);
+    margin-bottom: clamp(5px, 4vw, 24px);
 }
 
 
@@ -190,7 +190,7 @@ body {
     }
 
     .sum-chips {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 }
 
@@ -219,7 +219,7 @@ body {
     }
 
     .sum-chips {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
         gap: 10px;
     }
 
