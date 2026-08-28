@@ -4,7 +4,7 @@ body {
 }
 
 section {
-    scroll-margin-top: 120px;
+    scroll-margin-top: 96px;
     border-bottom: 0.5px solid var(--border);
 }
 
@@ -21,7 +21,7 @@ section:last-of-type {
 
 .hero-container {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 40px;
     max-width: 1200px;
     margin: 0 auto;
@@ -35,9 +35,8 @@ section:last-of-type {
 
 .hero-image img {
     width: 100%;
-    max-width: 420px;
+    max-width: 280px;
     height: auto;
-    margin-top: -40px;
 }
 
 .hero-text {
@@ -48,27 +47,28 @@ section:last-of-type {
 }
 
 .hero-text h2 {
-    font-size: 42px;
-    line-height: 1.08;
+    font-size: 46px;
+    line-height: 1.12;
     font-weight: 800;
     letter-spacing: -.02em;
     margin: 0 0 14px;
-    background: var(--lav);
+    background: var(--text);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 }
 
 .hero-text .sub {
-    font-size: 14px;
-    color: var(--text-dim);
-    margin: 0 0 22px;
+    font-size: 20px;
+    font-weight: 300;
+    color: var(--lav);
+    margin: 0 0 10px;
     line-height: 1.6;
     max-width: 380px;
 }
 
 .hero-text .hero-date {
-    font-size: 14px;
+    font-size: 18px;
     color: var(--text-faint);
     letter-spacing: .03em;
     margin-bottom: 20px;
@@ -83,8 +83,17 @@ section:last-of-type {
 .hero-text #button-container a,
 .hero-text #button-container button {
     width: 100% !important;
-    font-size: 14px !important;
-    padding: 13px 20px !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    padding: 14px 28px !important;
+}
+
+#button-container button,
+#button-container a {
+    background: linear-gradient(135deg, #c9b8fa, #9d84f0) !important;
+    color: #1a1330 !important;
+    border: none !important;
+    box-shadow: 0 8px 24px rgba(139, 111, 242, .35);
 }
 
 /*개요 섹션*/
@@ -103,6 +112,7 @@ section:last-of-type {
     font-size: 28px;
     font-weight: 700;
     margin-bottom: 22px;
+    color: var(--text);
 }
 
 #about-section p {
@@ -110,6 +120,7 @@ section:last-of-type {
     font-weight: 400;
     line-height: 1.6;
     word-break: keep-all;
+    color: var(--text-dim);
 }
 
 /*일정 섹션*/
@@ -131,7 +142,8 @@ section:last-of-type {
 
 /*회색 박스*/
 .schedule-box {
-    background-color: #2b2b2b;
+    background: linear-gradient(165deg, var(--card-bg), var(--bg-soft));
+    border: 1px solid var(--border);
     border-radius: 20px;
     padding: 50px 32px;
 }
@@ -149,7 +161,7 @@ section:last-of-type {
     left: 4%;
     right: 4%;
     height: 2px;
-    background-color: #ffffff;
+    background: linear-gradient(90deg, rgba(139, 111, 242, .15), rgba(139, 111, 242, .65), rgba(139, 111, 242, .15));
     z-index: 1;
 }
 
@@ -161,16 +173,18 @@ section:last-of-type {
 }
 
 .dot {
-    width: 12px;
-    height: 12px;
-    background-color: #ffffff;
+    width: 14px;
+    height: 14px;
+    background: var(--bg);
+    border: 2px solid var(--lav);
+    box-sizing: border-box;
     border-radius: 50%;
     margin: 0 auto 20px auto;
 }
 
 .timeline-item .date {
     font-size: 14px;
-    color: #a3a3a3;
+    color: var(--text-faint);
     margin-bottom: 0px;
 }
 
@@ -204,20 +218,28 @@ section:last-of-type {
 }
 
 .category-card {
-    background-color: #5c5c5c;
+    background: var(--card-bg);
+    border: 1px solid var(--border);
     border-radius: 12px;
     padding: 34px 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform .2s, border-color .2s, background .2s;
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-strong);
+    background: var(--card-bg-hover);
 }
 
 .icon-circle {
     width: 76px;
     height: 76px;
-    background-color: #ffffff;
+    background: linear-gradient(150deg, rgba(139, 111, 242, .25), rgba(196, 181, 253, .08));
+    border: 1px solid var(--border-strong);
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -233,7 +255,7 @@ section:last-of-type {
 .category-card p {
     font-size: 15px;
     font-weight: 300;
-    color: #ffffff;
+    color: var(--text);
     word-break: keep-all;
     line-height: 1.4;
 }
@@ -256,7 +278,6 @@ section:last-of-type {
     margin-bottom: 40px;
 }
 
-/*그리드 레이아웃*/
 .tracks-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -264,19 +285,24 @@ section:last-of-type {
 }
 
 .track-card {
-    background-color: #5c5c5c;
+    background: linear-gradient(165deg, #1e1a2e, #161320);
+    border: 1px solid var(--border-strong);
     border-radius: 12px;
     padding: 34px 18px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform .2s, border-color .2s;
+}
+
+.track-card:hover {
+    transform: translateY(-4px);
 }
 
 .track-stars {
     font-size: 18px;
-    color: #ffffff;
+    color: var(--lav);
     margin-bottom: -18px;
 }
 
@@ -302,100 +328,84 @@ section:last-of-type {
     display: flex;
 }
 
-/*모바일 뷰 세팅*/
 * {
     box-sizing: border-box;
 }
 
+/*히어로 배경 장식*/
+#hero-section {
+    position: relative;
+    overflow: hidden;
+}
+
+#hero-section::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    right: -160px;
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(139, 111, 242, .30), transparent 65%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 1;
+}
+
 /*모바일용 css*/
 @media screen and (max-width: 768px) {
-
-    .header,
     .header-container {
         height: auto !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    .header-container {
-        position: relative !important;
+        padding: 0 20px !important;
     }
 
     .component-container {
         display: flex !important;
         justify-content: space-between !important;
         align-items: center !important;
-        height: 60px !important;
-        padding: 0 20px !important;
-        margin: 0 !important;
-        position: static !important;
+        height: 58px !important;
     }
 
     .header-logo {
-        font-size: 24px !important;
-        line-height: 1 !important;
-        margin: 0 !important;
-        position: relative !important;
-        z-index: 10001 !important;
+        font-size: 18px !important;
     }
 
     .icon-btn {
         display: none !important;
     }
 
-    .icon-group {
-        position: static !important;
-    }
-
     .icon-btn:last-child {
         display: block !important;
-        position: absolute !important;
-        top: 16px !important;
-        right: 20px !important;
-        font-size: 28px !important;
-        background: transparent !important;
-        border: none !important;
-        color: #ffffff !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        z-index: 10000 !important;
+        font-size: 24px !important;
+        color: var(--text) !important;
     }
 
     .icon-group.active {
         position: absolute !important;
-        top: 0 !important;
+        top: 58px !important;
         left: 0 !important;
         width: 100% !important;
-        height: auto !important;
-        background-color: #111111 !important;
+        background-color: var(--bg-soft) !important;
         display: flex !important;
-        flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        align-items: center !important;
-        padding: 60px 10px 15px 10px !important;
-        margin: 0 !important;
+        padding: 16px 10px !important;
+        gap: 16px !important;
         z-index: 9999 !important;
-        border-bottom: 1px solid #333333 !important;
+        border-bottom: 1px solid var(--border) !important;
     }
 
     .icon-group.active .icon-btn:not(:last-child) {
         display: block !important;
-        width: auto !important;
-        padding: 8px 6px !important;
-        margin: 0 2px !important;
         font-size: 14px !important;
-        color: #a3a3a3 !important;
-        background: transparent !important;
-        border: none !important;
-        border-radius: 0 !important;
-        line-height: 1 !important;
-        height: auto !important;
-        text-align: center !important;
+        color: var(--text-faint) !important;
     }
 
     section {
-        scroll-margin-top: 50px !important;
+        scroll-margin-top: 60px !important;
     }
 
     /*메인 배너(전시회) 섹션*/
@@ -405,7 +415,6 @@ section:last-of-type {
     }
 
     .hero-container {
-        display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
         gap: 30px !important;
@@ -414,52 +423,36 @@ section:last-of-type {
 
     .hero-image {
         width: 100% !important;
-        display: flex !important;
         justify-content: center !important;
-        margin-bottom: -40px;
     }
 
     .hero-image img {
-        width: 80% !important;
-        max-width: 300px !important;
-        margin-top: 0 !important;
+        max-width: 200px !important;
     }
 
     .hero-text {
         width: 90% !important;
         max-width: 320px !important;
-        display: flex !important;
-        flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
     }
 
     .hero-text h2 {
-        font-size: 36px !important;
-        line-height: 1.3 !important;
-        margin-bottom: -10px !important;
+        font-size: 32px !important;
+        margin-bottom: 12px !important;
     }
 
     .hero-text .sub {
-        font-size: 14px;
-        margin-top: 20px;
+        font-size: 14px !important;
+        max-width: none !important;
     }
 
     .hero-text .hero-date {
-        font-size: 14px !important;
-        margin-bottom: 15px !important;
+        font-size: 13px !important;
     }
 
     #button-container {
-        width: 230px !important;
-    }
-
-    #button-container button,
-    #button-container a {
-        width: 100% !important;
-        white-space: nowrap !important;
-        font-size: 14px !important;
-        padding: 12px -5px !important;
+        max-width: 260px !important;
     }
 
     /*개요 섹션*/
@@ -476,15 +469,12 @@ section:last-of-type {
     }
 
     #about-section h2 {
-        font-size: 24px !important;
+        font-size: 22px !important;
         margin-bottom: 16px !important;
-        padding: 0 !important;
     }
 
     #about-section p {
         font-size: 14px !important;
-        padding: 0 !important;
-        margin: 0 !important;
     }
 
     /*일정 섹션*/
@@ -497,84 +487,52 @@ section:last-of-type {
     .schedule-container {
         width: 100% !important;
         max-width: 320px !important;
-        display: flex !important;
-        flex-direction: column !important;
     }
 
     #schedule-section h2 {
-        font-size: 24px !important;
-        align-self: flex-start !important;
+        font-size: 22px !important;
         margin-bottom: 24px !important;
     }
 
     .schedule-box {
-        background-color: #2a2a2a !important;
-        border-radius: 20px !important;
         padding: 40px 20px !important;
-        width: 100% !important;
     }
 
     .timeline {
-        position: relative !important;
-        display: flex !important;
         flex-direction: column !important;
         gap: 30px !important;
     }
 
     .timeline::before {
-        content: "" !important;
-        position: absolute !important;
         top: 0 !important;
         left: 15px !important;
+        right: auto !important;
         width: 2px !important;
         height: 100% !important;
-        background-color: #ffffff !important;
-        transform: translateX(-50%) !important;
-        z-index: 1 !important;
     }
 
     .timeline-item {
         display: flex !important;
         align-items: center !important;
-        position: relative !important;
         padding-left: 45px !important;
-        z-index: 2 !important;
-    }
-
-    .timeline-item .label {
-        font-weight: 300;
     }
 
     .dot {
-        width: 8px !important;
-        height: 8px !important;
-        background-color: #ffffff !important;
-        border-radius: 50% !important;
         position: absolute !important;
-        top: 50% !important;
         left: 15px !important;
-        transform: translate(-50%, -50%) !important;
-        z-index: 3 !important;
+        transform: translateX(-50%) !important;
     }
 
-    .date {
+    .timeline-item .date {
         width: 45% !important;
         text-align: left !important;
-        padding-right: 10px !important;
         font-size: 12px !important;
-        color: #a3a3a3 !important;
-        line-height: 1.4 !important;
-        margin: 0 !important;
-        word-break: keep-all !important;
     }
 
-    .label {
+    .timeline-item .label {
         width: 55% !important;
         text-align: left !important;
         font-size: 14px !important;
-        color: #ffffff !important;
-        margin: 0 !important;
-        word-break: keep-all !important;
     }
 
     /*분야 섹션*/
@@ -590,9 +548,8 @@ section:last-of-type {
     }
 
     .categories-container h2 {
-        font-size: 24px !important;
+        font-size: 22px !important;
         margin-bottom: 24px !important;
-        text-align: left !important;
     }
 
     .categories-grid {
@@ -616,10 +573,8 @@ section:last-of-type {
     }
 
     .category-card p {
-        font-size: 16px !important;
+        font-size: 15px !important;
         text-align: left !important;
-        margin: 0 !important;
-        font-weight: 300;
     }
 
     /*트랙 섹션*/
@@ -636,9 +591,8 @@ section:last-of-type {
     }
 
     .tracks-container h2 {
-        font-size: 24px !important;
+        font-size: 22px !important;
         margin-bottom: 24px !important;
-        text-align: left !important;
     }
 
     .tracks-grid {
@@ -652,117 +606,22 @@ section:last-of-type {
     }
 
     .track-stars {
-        font-size: 20px !important;
-        margin-bottom: -15px !important;
+        font-size: 18px !important;
+        margin-bottom: -14px !important;
     }
 
     .track-card h3 {
-        font-size: 28px !important;
+        font-size: 24px !important;
         margin-bottom: 12px !important;
     }
 
     .track-card p {
-        font-size: 14px !important;
-        line-height: 1.5 !important;
-        font-weight: 300;
+        font-size: 13px !important;
     }
 
     /*푸터*/
     .footer {
         padding: 30px 20px !important;
-        font-size: 14px !important;
+        font-size: 13px !important;
     }
-}
-
-/*
-============= UI 개선 =============
-*/
-
-#hero-section {
-    position: relative;
-    overflow: hidden;
-}
-
-#hero-section::before {
-    content: '';
-    position: absolute;
-    top: -200px;
-    right: -160px;
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(139, 111, 242, .30), transparent 65%);
-    pointer-events: none;
-    z-index: 0;
-}
-
-.hero-container {
-    position: relative;
-    z-index: 1;
-}
-
-.hero-text h2 {
-    background: var(--text);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-
-#about-section h2 {
-    color: var(--text);
-}
-
-#about-section p {
-    color: var(--text-dim);
-}
-
-.schedule-box {
-    background: linear-gradient(165deg, var(--card-bg), var(--bg-soft)) !important;
-    border: 1px solid var(--border);
-}
-
-.timeline::before {
-    background: linear-gradient(90deg, rgba(139, 111, 242, .15), rgba(139, 111, 242, .65), rgba(139, 111, 242, .15)) !important;
-}
-
-.dot {
-    background: var(--bg) !important;
-    border: 2px solid var(--lav) !important;
-    width: 14px !important;
-    height: 14px !important;
-    box-sizing: border-box;
-}
-
-.timeline-item .date {
-    color: var(--text-faint) !important;
-}
-
-.category-card {
-    background: var(--card-bg) !important;
-    border: 1px solid var(--border);
-    transition: transform .2s, border-color .2s, background .2s;
-}
-
-.category-card:hover {
-    transform: translateY(-4px);
-    border-color: var(--border-strong);
-    background: var(--card-bg-hover) !important;
-}
-
-.icon-circle {
-    background: linear-gradient(150deg, rgba(139, 111, 242, .25), rgba(196, 181, 253, .08)) !important;
-    border: 1px solid var(--border-strong);
-}
-
-.track-card {
-    background: linear-gradient(165deg, #1e1a2e, #161320) !important;
-    border: 1px solid var(--border-strong);
-    transition: transform .2s, border-color .2s;
-}
-
-.track-card:hover {
-    transform: translateY(-4px);
-}
-
-.track-stars {
-    color: var(--lav) !important;
 }
