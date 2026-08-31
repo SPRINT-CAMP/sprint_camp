@@ -27,10 +27,17 @@
         "github": "https://github.com/imulose/security-scanner",
         "demo": "",
         "ppt_img": [
-            "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png"
+            "assets/images/ppt_images/버그잡조-001.jpg",
+            "assets/images/ppt_images/버그잡조-002.jpg",
+            "assets/images/ppt_images/버그잡조-003.jpg",
+            "assets/images/ppt_images/버그잡조-004.jpg",
+            "assets/images/ppt_images/버그잡조-005.jpg",
+            "assets/images/ppt_images/버그잡조-006.jpg",
+            "assets/images/ppt_images/버그잡조-007.jpg",
+            "assets/images/ppt_images/버그잡조-008.jpg",
+            "assets/images/ppt_images/버그잡조-009.jpg",
+            "assets/images/ppt_images/버그잡조-010.jpg",
+            "assets/images/ppt_images/버그잡조-011.jpg"
         ]
     },
     {
@@ -265,10 +272,23 @@
         "github": "https://firstsec-security-lab.vercel.app/",
         "demo": "",
         "ppt_img": [
-            "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png",
-            "assets/images/sample_4x3.png"
+            "assets/images/ppt_images/전지적관리자시점-001.jpg",
+            "assets/images/ppt_images/전지적관리자시점-002.jpg",
+            "assets/images/ppt_images/전지적관리자시점-003.jpg",
+            "assets/images/ppt_images/전지적관리자시점-004.jpg",
+            "assets/images/ppt_images/전지적관리자시점-005.jpg",
+            "assets/images/ppt_images/전지적관리자시점-006.jpg",
+            "assets/images/ppt_images/전지적관리자시점-007.jpg",
+            "assets/images/ppt_images/전지적관리자시점-008.jpg",
+            "assets/images/ppt_images/전지적관리자시점-009.jpg",
+            "assets/images/ppt_images/전지적관리자시점-010.jpg",
+            "assets/images/ppt_images/전지적관리자시점-011.jpg",
+            "assets/images/ppt_images/전지적관리자시점-012.jpg",
+            "assets/images/ppt_images/전지적관리자시점-013.jpg",
+            "assets/images/ppt_images/전지적관리자시점-014.jpg",
+            "assets/images/ppt_images/전지적관리자시점-015.jpg",
+            "assets/images/ppt_images/전지적관리자시점-016.jpg",
+            "assets/images/ppt_images/전지적관리자시점-017.jpg"
         ]
     },
     {
