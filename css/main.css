@@ -109,6 +109,10 @@ section:last-of-type {
     margin: 0 auto;
 }
 
+.about-content p {
+    word-break: keep-all;
+}
+
 #about-section h2 {
     font-size: 28px;
     font-weight: 700;
@@ -213,21 +217,73 @@ section:last-of-type {
 }
 
 .categories-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    padding: 8px 0 12px;
+    scrollbar-width: none;
+}
+
+.categories-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .category-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 34px 18px;
+    flex: 0 0 330px;
+    scroll-snap-align: start;
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 16px;
+    padding: 36px 28px;
+    height: 440px;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.category-team {
+    margin-top: 8px;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.category-team::-webkit-scrollbar {
+    display: none;
+}
+
+.category-team p {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-dim);
+    margin: 0 0 4px;
+}
+
+.category-team p:last-child {
+    margin-bottom: 0;
+}
+
+.icon-circle {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 140px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    transition: transform .2s, border-color .2s, background .2s;
+    flex-shrink: 0;
+}
+
+.category-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    word-break: keep-all;
+    line-height: 1.4;
+    margin: 32px 0 0;
 }
 
 .category-card:hover {
@@ -236,29 +292,9 @@ section:last-of-type {
     background: var(--card-bg-hover);
 }
 
-.icon-circle {
-    width: 76px;
-    height: 76px;
-    background: linear-gradient(150deg, rgba(139, 111, 242, .25), rgba(196, 181, 253, .08));
-    border: 1px solid var(--border-strong);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
 .icon-circle img {
-    width: 50%;
+    width: 80%;
     height: auto;
-}
-
-.category-card p {
-    font-size: 15px;
-    font-weight: 300;
-    color: var(--text);
-    word-break: keep-all;
-    line-height: 1.4;
 }
 
 /* --- 트랙 섹션 --- */
@@ -512,43 +548,89 @@ section:last-of-type {
     /*분야 섹션*/
     #categories-section {
         padding: 60px 20px !important;
-        display: flex !important;
-        justify-content: center !important;
     }
 
     .categories-container {
         width: 100% !important;
-        max-width: 320px !important;
+        max-width: 100% !important;
     }
 
     .categories-container h2 {
         font-size: 22px !important;
         margin-bottom: 24px !important;
+        padding: 0 20px !important;
     }
 
     .categories-grid {
         display: flex !important;
-        flex-direction: column !important;
-        gap: 16px !important;
+        flex-direction: row !important;
+        gap: 12px !important;
+        overflow-x: auto !important;
+        scroll-behavior: smooth !important;
+        scroll-snap-type: x mandatory !important;
+        padding: 8px 0px 12px !important;
+        scrollbar-width: none !important;
+    }
+
+    .categories-grid::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .category-card:last-child {
+        margin-right: 20px !important;
     }
 
     .category-card {
-        flex-direction: row !important;
-        padding: 16px 20px !important;
+        flex: 0 0 220px !important;
+        scroll-snap-align: start !important;
+        width: auto !important;
+        height: 300px !important;
+        min-height: 0 !important;
+        padding: 24px 20px !important;
+
+        flex-direction: column !important;
+        align-items: flex-start !important;
         justify-content: flex-start !important;
     }
 
     .icon-circle {
         width: 48px !important;
         height: 48px !important;
-        margin-bottom: 0 !important;
-        margin-right: 20px !important;
+        margin: 0 0 24px 0 !important;
         flex-shrink: 0 !important;
     }
 
-    .category-card p {
-        font-size: 15px !important;
+    .icon-circle img {
+        width: 50% !important;
+        height: auto !important;
+    }
+
+    .category-title {
+        font-size: 16px !important;
         text-align: left !important;
+        margin: 20px 0 0 !important;
+        line-height: 1.4 !important;
+    }
+
+    .category-team {
+        margin-top: 10px !important;
+        overflow-y: auto !important;
+        scrollbar-width: none !important;
+    }
+
+    .category-team::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .category-team p {
+        font-size: 12px !important;
+        color: var(--lav) !important;
+        margin: 0 0 2px !important;
+        text-align: left !important;
+    }
+
+    .category-team p:last-child {
+        /* margin-bottom: 0 !important; */
     }
 
     /*트랙 섹션*/
