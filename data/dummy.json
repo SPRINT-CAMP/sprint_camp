@@ -25,7 +25,7 @@
         "level": "비기너",
         "thumbnail": "assets/images/버그잡조.png",
         "github": "https://github.com/imulose/security-scanner",
-        "demo": "",
+        "demo": "https://drive.google.com/drive/u/0/folders/1yM6IsTV1y_7jknM4opZeMfcyQYM7Gi9N?ths=true",
         "ppt_img": [
             "assets/images/ppt_images/버그잡조-001.jpg",
             "assets/images/ppt_images/버그잡조-002.jpg",
@@ -289,7 +289,7 @@
         "level": "비기너",
         "thumbnail": "assets/images/전지적관리자시점.png",
         "github": "https://firstsec-security-lab.vercel.app/",
-        "demo": "",
+        "demo": "https://drive.google.com/file/d/1e13VIULZiGxDHSLw27AgKeq3XKKYwmmv/view?usp=drive_link",
         "ppt_img": [
             "assets/images/ppt_images/전지적관리자시점-001.jpg",
             "assets/images/ppt_images/전지적관리자시점-002.jpg",
